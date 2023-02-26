@@ -1,3 +1,47 @@
 *{
-    background-color: #FFF23D;
+    color: #192B85!important;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Alegreya Sans', sans-serif;
+    background-color: #f1f1f1;
+}
+.navbar{
+    background-color: #fff;
+    overflow: hidden;
+    font-size: 16px;
+    border-bottom: 1px solid #eee;
+    box-shadow: rgba(0,0,0,0.2) 2px 5px 10px;
+    display: flex;
+    align-items: center;
+}
+prawo{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: auto;
+}
+.navbar li{
+    list-style-type: none;
+    cursor: pointer;
+}
+.navbar li span {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+}
+.navbar li img{
+    height: 30px;
+    margin: 5px 10px;
+    vertical-align: middle;
+}
+ul{
+    padding: 0px;
+    margin: 0px;
+}
+.navbar li span:hover{
+    background-color: #ddd;
+    color: black;
 }

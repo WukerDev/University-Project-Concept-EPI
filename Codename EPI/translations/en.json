@@ -1,11 +1,11 @@
 { 
-    "lang": "en",
+    "lang": "EN",
+    "home": "Homes", 
     "page_title": "Kazimierz Wielki University",
     "cookies_info": "This website uses cookies to ensure you get the best experience on our website.",
     "cookies_accept": "Accept",
     "cookies_more": "More",
     "cookies_link": "https://www.kwu.edu.pl/en/cookies",
-    "home": "Home", 
     "more": "More",
     "contact": "Contact",
     "gallery": "Gallery"

@@ -1,5 +1,5 @@
 *{
-    color: #192B85!important;
+    color: #192B85;
 }
 body{
     margin: 0px;
@@ -28,9 +28,15 @@ prawo{
 }
 .navbar li span {
     display: block;
-    color: white;
     text-align: center;
     padding: 14px 16px;
+    flex-grow: 1;
+}
+.navbar .languageclass{
+    background-color: #192B85;
+}
+.navbar .languageclass span{
+    color: white;
 }
 .navbar li img{
     height: 30px;

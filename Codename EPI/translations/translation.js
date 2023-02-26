@@ -3,11 +3,22 @@ function zaladujDane() {
     xhr.onreadystatechange = function() {
         if (xhr.readyState == 4 && xhr.status == 200) {
             var dane = JSON.parse(xhr.responseText);
-            var daneDiv = document.getElementById("translate_lang");
+            //home
+            var daneDiv = document.getElementById("translate_home");
             daneDiv.innerHTML = "<span>"+ dane.home + "</span>";
+            //gallery
             daneDiv = document.getElementById("translate_gallery");
             daneDiv.innerHTML = "<span>"+ dane.gallery + "</span>";
-            
+            //page title
+            daneDiv = document.getElementById("translate_page_title");
+            daneDiv.innerHTML = dane.page_title;
+            //lang info
+            daneDiv = document.getElementById("translate_lang");
+            daneDiv.innerHTML = "<span>"+ dane.lang + "</span>";
+            //contact info
+            daneDiv = document.getElementById("translate_contact");
+            daneDiv.innerHTML = "<span>"+ dane.contact + "</span>";
+
         }
     };
     xhr.open("GET", "../translations/en.json", true);
@@ -16,8 +27,7 @@ function zaladujDane() {
 window.onload = addEventListener("load", zaladujDane);
 
 
-// daneDiv = document.getElementById("translate_page_title");
-// daneDiv.innerHTML = "<span>"+ dane.page_title + "</span>";
+
 
 // daneDiv = document.getElementById("translate_cookies_info");
 // daneDiv.innerHTML = "<span>"+ dane.cookies_info + "</span>";

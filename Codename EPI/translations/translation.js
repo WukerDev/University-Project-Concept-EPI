@@ -27,8 +27,6 @@ function zaladujDane() {
 window.onload = addEventListener("load", zaladujDane);
 
 
-
-
 // daneDiv = document.getElementById("translate_cookies_info");
 // daneDiv.innerHTML = "<span>"+ dane.cookies_info + "</span>";
 

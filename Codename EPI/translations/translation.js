@@ -21,8 +21,8 @@ function zaladujDane() {
             daneDiv = document.getElementById("translate_page_title");
             daneDiv.innerHTML = dane.page_title;
             //lang info
-            daneDiv = document.getElementById("translate_lang");
-            daneDiv.innerHTML = "<span>"+ dane.lang + "</span>";
+             daneDiv = document.getElementById("translate_lang");
+             daneDiv.innerHTML = "<span>"+ dane.lang + "</span>";
             //contact info
             daneDiv = document.getElementById("translate_contact");
             daneDiv.innerHTML = "<span>"+ dane.contact + "</span>";
@@ -33,16 +33,16 @@ function zaladujDane() {
     xhr.send();
 }
 
-function zaladujJezyki() {
-var divs = "";
-for (var i = 0; i < jezyki.length; i++) {
-  divs += "<a>" + jezyki[i] + "</a><br>";
-}
-document.getElementById("jezyki").innerHTML = divs;
-}
+// function zaladujJezyki() {
+// var divs = "";
+// for (var i = 0; i < jezyki.length; i++) {
+//   divs += "<a>" + jezyki[i] + "</a><br>";
+// }
+// document.getElementById("jezyki").innerHTML = divs;
+// }
 
 
-window.onload = addEventListener("load", zaladujJezyki);
+// window.onload = addEventListener("load", zaladujJezyki);
 window.onload = addEventListener("load", zaladujDane);
 
 

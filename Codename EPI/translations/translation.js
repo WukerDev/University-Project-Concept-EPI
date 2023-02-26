@@ -15,6 +15,7 @@ function zaladujDane() {
 }
 window.onload = addEventListener("load", zaladujDane);
 
+
 // daneDiv = document.getElementById("translate_page_title");
 // daneDiv.innerHTML = "<span>"+ dane.page_title + "</span>";
 

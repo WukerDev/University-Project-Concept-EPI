@@ -1,3 +1,11 @@
+//Config
+//Languages to be displayed
+var jezyki=["EN", "PL", "RU", "UA", "DE", "FR", "ES", "IT"];
+
+
+
+
+
 function zaladujDane() {
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
@@ -24,7 +32,19 @@ function zaladujDane() {
     xhr.open("GET", "../translations/en.json", true);
     xhr.send();
 }
+
+function zaladujJezyki() {
+var divs = "";
+for (var i = 0; i < jezyki.length; i++) {
+  divs += "<a>" + jezyki[i] + "</a><br>";
+}
+document.getElementById("jezyki").innerHTML = divs;
+}
+
+
+window.onload = addEventListener("load", zaladujJezyki);
 window.onload = addEventListener("load", zaladujDane);
+
 
 
 // daneDiv = document.getElementById("translate_cookies_info");

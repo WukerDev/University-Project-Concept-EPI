@@ -2,32 +2,71 @@ body{
     margin: 0px;
     padding: 0px;
     font-family: 'Source Sans Pro', sans-serif;
-    background-color: #f1f1f1;
+    background-color: #F9FAFC;
     margin-top: 90px;
 }
+
+#scroll-top{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #39478d;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 100;
+    box-shadow: rgba(0,0,0,0.2) 2px 5px 10px;
+    color: white;
+}
+
 .navbar{
     position: fixed;
     width: 100%;
     top: 0;
     background-color: #fff;
-    overflow: hidden;
     font-size: 16px;
     border-bottom: 1px solid #eee;
     box-shadow: rgba(0,0,0,0.2) 2px 5px 10px;
     display: flex;
     align-items: center;
 }
+
+/* v NAVBAR DESKTOP v */
+
 .main ul{
     display: flex;
     align-items: stretch;
     padding: 0px;
     margin: 0px;
 }
-prawo{
+prawo-p{
     display: flex;
     justify-content: flex-end;
     margin-left: auto;
 }
+social-media, social-media > img{
+    justify-content: center;
+    opacity:0.75;
+    padding-top: 2px;
+    margin-bottom:0;
+    filter: invert(100%) sepia(0%) saturate(7489%) hue-rotate(49deg) brightness(124%) contrast(99%);
+}
+
+social-media-herb, social-media-herb > img{
+    opacity:0.85;
+    padding-top: 5px;
+    margin-bottom:0;
+    width: 50px;
+    height: 50px;
+    padding-bottom: 7px;
+    filter: invert(100%) sepia(0%) saturate(7489%) hue-rotate(49deg) brightness(124%) contrast(99%);
+}
+
 .navbar li{
     display: flex;
     justify-content: center;
@@ -48,6 +87,19 @@ prawo{
 .navbar .languageclass span{
     color: white;
 }
+.speen {
+    animation: spin 2s infinite linear
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(359deg)
+    }
+}
 .navbar li img{
     height: 40px;
     margin: 5px 10px;
@@ -57,7 +109,39 @@ prawo{
     margin: 0px 10px;
 }
 
-
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dropdown{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.dropdown-menu{
+    position: absolute;
+    right: 0;
+    display: none;
+    background-color: white;
+    margin-top: 78px;
+    box-shadow: rgba(0,0,0,0.3) 0px 5px 5px;
+    flex-direction: column;
+}
+.dropdown-menu a{
+    color: black;
+    padding: 7px 15px;
+    display: block;
+    clear: both;
+    font-size: 14px;
+    text-decoration: none;
+}
+.dropdown-menu a:hover{
+    background-color: rgba(0,0,0,0.1);
+}
+.dropdown:hover .dropdown-menu{
+    display: inline-flex;
+}
 
 
 span.highlight{
@@ -67,14 +151,13 @@ span.highlight{
 
 
 .footer-ukw {
-    padding:50px 0;
+    padding:2px 0;
     color:#f0f9ff;
-    background-color:#192B85;
+    background-color:#223dc7;
   }
 .footer-ukw .copyright {
     text-align:center;
-    padding-top:24px;
-    opacity:0.3;
+    opacity:0.75;
     font-size:13px;
-    margin-bottom:0;
+    margin: 4px 0px;
   }

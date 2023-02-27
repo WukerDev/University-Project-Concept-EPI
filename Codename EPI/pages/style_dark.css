@@ -29,6 +29,7 @@ prawo{
     justify-content: flex-end;
     margin-left: auto;
 }
+
 .navbar li{
     display: flex;
     justify-content: center;

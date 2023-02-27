@@ -13,19 +13,19 @@ function zaladujDane() {
             var dane = JSON.parse(xhr.responseText);
             //home
             var daneDiv = document.getElementById("translate_home");
-            daneDiv.innerHTML = "<span>"+ dane.home + "</span>";
+            daneDiv.innerHTML = "<span><b>"+ dane.home + "</b></span>";
             //gallery
             daneDiv = document.getElementById("translate_gallery");
-            daneDiv.innerHTML = "<span>"+ dane.gallery + "</span>";
+            daneDiv.innerHTML = "<span><b>"+ dane.gallery + "</b></span>";
             //page title
             daneDiv = document.getElementById("translate_page_title");
             daneDiv.innerHTML = dane.page_title;
             //lang info
              daneDiv = document.getElementById("translate_lang");
-             daneDiv.innerHTML = "<span>"+ dane.lang + "</span>";
+             daneDiv.innerHTML = "<span><b>"+ dane.lang + "</b></span>";
             //contact info
             daneDiv = document.getElementById("translate_contact");
-            daneDiv.innerHTML = "<span>"+ dane.contact + "</span>";
+            daneDiv.innerHTML = "<span><b>"+ dane.contact + "</b></span>";
 
         }
     };

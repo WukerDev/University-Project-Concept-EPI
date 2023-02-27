@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="hover-min.css">
     <script src="https://kit.fontawesome.com/dea6e96ac2.js" crossorigin="anonymous"></script>
     <script src="../translations/translation.js"></script>
+    <script src="../translations/test.js"></script>
     <link rel="apple-touch-icon" sizes="76x76" href="https://drive.google.com/uc?id=14GIp3a3IxieImciPy8vdD6pR5dJGjf6S">
     <link rel="icon" type="image/png" sizes="32x32" href="https://drive.google.com/uc?id=1yBZoKf1PtZVUM58aiPz68ZLX8SjgJwx3">
     <link rel="icon" type="image/png" sizes="16x16" href="https://drive.google.com/uc?id=1c5efSqg4HNZyt_iuhMACfj4766mj4WmH">
@@ -26,15 +27,25 @@
     <meta name="theme-color" content="#ffffff">
 </head>
 <body>
+    <button id="scroll-top"><i class="fas fa-arrow-up"></i></button>
     <div class="main">
         <ul class="navbar">
-            <li class="notdropdown"><span><img src="https://www.ukw.edu.pl/img/ukw.svg" alt="Uniwersytet Kazimierza Wielkiego w Bydgoszczy" class="hvr-grow"></span></li>
-            <prawo>
+            <li class="notdropdown"><span><img src="https://www.ukw.edu.pl/img/ukw.svg" alt="Uniwersytet Kazimierza Wielkiego w Bydgoszczy" class="hvr-grow hvr-float"></span></li>
+            <prawo-p>
                 <li class="hvr-underline-from-left notdropdown" id="translate_home"><span>TEST</span></li>
                 <li class="hvr-underline-from-center notdropdown" id="translate_gallery"><span>TEST</span></li>
                 <li class="hvr-underline-from-right notdropdown" id="translate_contact"><span>TEST</span></li>
-                <li class="" id="translate_lang"><span>TEST</span></li>
-            </prawo>
+                
+            <div class="dropdown">
+                <li id="translate_lang"><span>TEST</span></li>
+                <div class="dropdown-menu">
+                    <a href="#">Item 1</a>
+                    <a href="#">Item 2</a>
+                    <a href="#">Item 3</a>
+                    <a href="#">Item 4</a>
+                </div>
+            </div>
+            </prawo-p>
         </ul>
         <div class="content">
             <p><span class="highlight">Lorem</span> ipsum dolor sit amet, consectetur adipiscing elit. Duis quis libero tortor. Fusce eu magna arcu. Phasellus ac pellentesque ante. Integer eu auctor massa. Nam nec mi vel sem laoreet imperdiet a suscipit sem. Nulla sed tincidunt risus. Nam molestie eu dui varius vulputate. Vivamus commodo mi id nunc sodales malesuada. Fusce nec neque eget erat placerat pretium. Donec tincidunt tellus a libero mollis, at mattis turpis commodo. Donec non odio dapibus, aliquam odio quis, euismod orci.</p>
@@ -74,9 +85,26 @@
 
     <div class="footer-ukw">
         <footer>
+
             <div class="container">
                 <div class="row">
-                <p class="copyright">Uniwersytet Kazimierza Wielkiego w Bydgoszczy © 2023</p>
+                    <social-media-herb>    
+                        <img src="https://www.ukw.edu.pl/img/ukw-herb.svg"><br>
+                    </social-media-herb></div>
+                    <div class="row"> 
+                        <social-media>
+                        <a href="https://www.facebook.com/ukwbydgoszcz" target="_blank"><img src="../assets/facebook.svg"></a>
+                        <a href="https://www.instagram.com/ukwbydgoszcz" target="_blank"><img src="../assets/instagram.svg"></a>
+                        <a href="https://twitter.com/UKWBydgoszcz" target="_blank"><img src="../assets/twitter.svg"></a>
+                        <a href="https://www.linkedin.com/school/uniwersytet-kazimierza-wielkiego/?originalSubdomain=pl" target="_blank"><img src="../assets/linkedin.svg"></a>
+                        <a href="https://www.youtube.com/ukwbydgoszcz" target="_blank"><img src="../assets/youtube.svg"></a>
+                    </social-media>
+                    </div>    
+                <div class="row"> 
+                <p class="copyright">
+                    ©2023 Uniwersytet Kazimierza Wielkiego 
+                </p> 
+                </div>   
             </div>
         </footer>
     </div>

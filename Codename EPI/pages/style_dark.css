@@ -1,0 +1,80 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #f1f1f1;
+    margin-top: 90px;
+}
+.navbar{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: #fff;
+    overflow: hidden;
+    font-size: 16px;
+    border-bottom: 1px solid #eee;
+    box-shadow: rgba(0,0,0,0.2) 2px 5px 10px;
+    display: flex;
+    align-items: center;
+}
+.main ul{
+    display: flex;
+    align-items: stretch;
+    padding: 0px;
+    margin: 0px;
+}
+prawo{
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+}
+.navbar li{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    cursor: pointer;
+    background-color: #fff;
+    align-items: center;
+}
+
+.navbar li span {
+    display: flex;
+    text-align: center;
+    padding: 14px 26px;
+}
+.navbar .languageclass{
+    background-color: #192B85;
+}
+.navbar .languageclass span{
+    color: white;
+}
+.navbar li img{
+    height: 40px;
+    margin: 5px 10px;
+    vertical-align: middle;
+}
+.content{
+    margin: 0px 10px;
+}
+
+
+
+
+span.highlight{
+    font-size: 1.5em;
+    color: #0e1c63;
+}
+
+
+.footer-ukw {
+    padding:50px 0;
+    color:#f0f9ff;
+    background-color:#192B85;
+  }
+.footer-ukw .copyright {
+    text-align:center;
+    padding-top:24px;
+    opacity:0.3;
+    font-size:13px;
+    margin-bottom:0;
+  }

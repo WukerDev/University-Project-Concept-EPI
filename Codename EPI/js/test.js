@@ -2,7 +2,7 @@ $(document).ready(function() {
     $('#scroll-top').hide();
     $(window).scroll(function() {
         if ($(this).scrollTop() >= 200) {
-            $('#scroll-top').fadeIn();
+            $('#scroll-top').fadeIn("slow");
         } else {
             $('#scroll-top').fadeOut();
         }

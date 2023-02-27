@@ -2,6 +2,15 @@
 //Languages to be displayed
 var jezyki=["EN", "PL", "RU", "UA", "DE", "FR", "ES", "IT", "PT", "JP", "KO", "ZH", "IN"];
 
+$(document).ready(function() {
+    var theDiv = $(".dropdown-menu");
+    $.each(jezyki, function(index, value) {
+        var listItem = $("<a>").text(value);
+        theDiv.append(listItem);
+    });
+    $(".dropdown").append(theDiv);
+});
+
 
 
 

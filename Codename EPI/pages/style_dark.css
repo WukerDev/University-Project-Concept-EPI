@@ -2,17 +2,18 @@ body{
     margin: 0px;
     padding: 0px;
     font-family: 'Source Sans Pro', sans-serif;
-    background-color: #f1f1f1;
+    background-color: #131313;
+    color: white;
     margin-top: 90px;
 }
 .navbar{
     position: fixed;
     width: 100%;
     top: 0;
-    background-color: #fff;
+    background-color: #494949;
     overflow: hidden;
     font-size: 16px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #131313;
     box-shadow: rgba(0,0,0,0.2) 2px 5px 10px;
     display: flex;
     align-items: center;
@@ -33,7 +34,7 @@ prawo{
     justify-content: center;
     list-style-type: none;
     cursor: pointer;
-    background-color: #fff;
+    background-color: #494949;
     align-items: center;
 }
 

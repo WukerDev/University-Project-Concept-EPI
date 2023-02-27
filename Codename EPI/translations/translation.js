@@ -29,7 +29,7 @@ function zaladujDane() {
 
         }
     };
-    xhr.open("GET", "../translations/en.json", true);
+    xhr.open("GET", "../translations/pl.json", true);
     xhr.send();
 }
 

@@ -1,4 +1,5 @@
 { 
+    
     "lang": "PL",
     "home": "Dom", 
     "page_title": "Uniwersytet Kazimierza Wielkiego",
@@ -8,7 +9,7 @@
     "cookies_link": "https://www.ukw.edu.pl/en/cookies",
     "more": "Więcej",
     "contact": "Kontakt",
-    "gallery": "Galeria"
-    
+    "gallery": "Galeria",
+    "copyright": "©2023 Uniwersytet Kazimierza Wielkiego"
 }
 

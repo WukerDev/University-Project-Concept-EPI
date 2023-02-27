@@ -1,10 +1,10 @@
 $(document).ready(function() {
-    $('#scroll-top').hide();
+    $('.scroll-top-container').hide();
     $(window).scroll(function() {
-        if ($(this).scrollTop() >= 200) {
-            $('#scroll-top').fadeIn("slow");
+        if ($(this).scrollTop() >= 350) {
+            $('.scroll-top-container').fadeIn();
         } else {
-            $('#scroll-top').fadeOut();
+            $('.scroll-top-container').fadeOut();
         }
     });
     $('#scroll-top').click(function() {

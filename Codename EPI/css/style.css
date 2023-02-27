@@ -2,38 +2,51 @@ body{
     margin: 0px;
     padding: 0px;
     font-family: 'Source Sans Pro', sans-serif;
-    background-color: #F9FAFC;
+    background-color: var(--secondary-color);
     margin-top: 90px;
 }
-
+:root{
+    --primary-color: #ffffff ;
+    --secondary-color: #eeeeee;
+}
+.dark-theme{
+    --primary-color: #1c1d1f;
+    --secondary-color: #252b30;
+}
 #scroll-top{
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 40px;
-    height: 40px;
-    background-color: #39478d;
-    border-radius: 50%;
+    bottom: 25px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    background-color: #192b85;
+    border-radius: 20%;
+    border: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 1s;
     z-index: 100;
-    box-shadow: rgba(0,0,0,0.2) 2px 5px 10px;
-    color: white;
+    box-shadow: rgba(0,0,0,0.5) 4px 7px 10px;
+    color: rgb(255, 255, 255);
+    opacity: 70%; 
+}
+#scroll-top i{
+    font-size: 20px;
 }
 
 .navbar{
     position: fixed;
     width: 100%;
     top: 0;
-    background-color: #fff;
+    background-color: var(--primary-color);
     font-size: 16px;
     border-bottom: 1px solid #eee;
     box-shadow: rgba(0,0,0,0.2) 2px 5px 10px;
     display: flex;
     align-items: center;
+    z-index: 2;
 }
 
 /* v NAVBAR DESKTOP v */
@@ -61,6 +74,7 @@ social-media-embeded{
     justify-content: center;
     align-items: center;
     padding-bottom: 7px;
+    z-index: 0;
 }
 
 social-media-embeded > iframe {
@@ -75,10 +89,31 @@ social-media-embeded > div {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0px 10px;
+    margin: 5px 5%;
 
     
 }
+.news {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 15px;
+        background-color: var(--primary-color);
+        border-radius: 25px;
+        box-shadow: rgba(0,0,0,0.2) 2px 5px 10px;
+        margin: 5px 15px;
+        flex-wrap: wrap;
+        gap : 25px;
+        
+        
+    }
+
+ @media screen and (max-width: 1315px) {
+    .news {
+        flex-direction: column;
+    }
+}
+
 
 social-media-herb, social-media-herb > img{
     opacity:0.85;
@@ -87,7 +122,7 @@ social-media-herb, social-media-herb > img{
     width: 50px;
     height: 50px;
     padding-bottom: 7px;
-    color : #fff;
+    color : var(--primary-color);
     filter: invert(100%) sepia(0%) saturate(7489%) hue-rotate(49deg) brightness(124%) contrast(99%);
 }
 
@@ -96,7 +131,7 @@ social-media-herb, social-media-herb > img{
     justify-content: center;
     list-style-type: none;
     cursor: pointer;
-    background-color: #fff;
+    background-color: var(--primary-color);
     align-items: center;
 }
 
@@ -106,10 +141,10 @@ social-media-herb, social-media-herb > img{
     padding: 14px 26px;
 }
 .navbar .languageclass{
-    background-color: #192B85;
+    background-color: #223dc7;
 }
 .navbar .languageclass span{
-    color: white;
+    color: var(--primary-color);
 }
 .speen {
     animation: spin 2s infinite linear
@@ -131,6 +166,16 @@ social-media-herb, social-media-herb > img{
 }
 .content{
     margin: 0px 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 15px;
+    background-color: var(--primary-color);
+    border-radius: 25px;
+    box-shadow: rgba(0,0,0,0.2) 2px 5px 10px;
+    margin: 15px 5%;
+    flex-wrap: wrap;
+    gap : 25px;
 }
 
 .row{
@@ -147,7 +192,7 @@ social-media-herb, social-media-herb > img{
     position: absolute;
     right: 0;
     display: none;
-    background-color: white;
+    background-color: var(--primary-color);
     margin-top: 78px;
     box-shadow: rgba(0,0,0,0.3) 0px 5px 5px;
     flex-direction: column;
@@ -162,6 +207,7 @@ social-media-herb, social-media-herb > img{
 }
 .dropdown-menu a:hover{
     background-color: rgba(0,0,0,0.1);
+    cursor: pointer;
 }
 .dropdown:hover .dropdown-menu{
     display: flex;
@@ -170,13 +216,13 @@ social-media-herb, social-media-herb > img{
 
 span.highlight{
     font-size: 1.5em;
-    color: #0e1c63;
+    color: black;
 }
 
 
 .footer-ukw {
     padding:2px 0;
-    color:#f0f9ff;
+    color: var(--primary-color);
     background-color:#223dc7;
   }
 .footer-ukw .copyright {

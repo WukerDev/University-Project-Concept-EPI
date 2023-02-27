@@ -1,78 +1,80 @@
 //Config
-//Languages to be displayed
+//Dostepne jezyki
 var jezyki=["EN", "PL", "RU", "UA", "DE", "FR", "ES", "IT", "PT", "JP", "KO", "ZH", "IN"];
+var currentJezyk = "PL";
+var cookieJezyk = getCookie("jezyk");
+
+//Funkcja do odczytywania ciasteczka
+function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+}
 
 $(document).ready(function() {
+
+    //Sprawdz czy ciasteczko "jezyk" istnieje
+    if (!getCookie("jezyk")) {
+        document.cookie = "jezyk="+currentJezyk+"; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/";
+    }
+
+    //Uzupelnij dropdown o jezyki z listy
     var theDiv = $(".dropdown-menu");
     $.each(jezyki, function(index, value) {
-        var listItem = $("<a>").text(value);
-        theDiv.append(listItem);
+        if (value != cookieJezyk) {
+            var listItem = $("<a style=\"margin:0px 2px;\" onClick='changeLang(\""+value+"\")'>").text(""+value+"");
+            theDiv.append(listItem);
+        }
     });
     $(".dropdown").append(theDiv);
 });
 
+//Funkcja zmieniajaca jezyk strony
+function changeLang(language){
+    document.cookie = "jezyk="+language+"; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/";
+    location.reload();
+}
 
-
-
-
+//Funkcja ladujaca dane z pliku json
 function zaladujDane() {
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
         if (xhr.readyState == 4 && xhr.status == 200) {
             var dane = JSON.parse(xhr.responseText);
-            //home
-            var daneDiv = document.getElementById("translate_home");
-            daneDiv.innerHTML = "<span><b>"+ dane.home + "</b></span>";
-            //gallery
-            daneDiv = document.getElementById("translate_gallery");
-            daneDiv.innerHTML = "<span><b>"+ dane.gallery + "</b></span>";
-            //page title
-            daneDiv = document.getElementById("translate_page_title");
-            daneDiv.innerHTML = dane.page_title;
-            //lang info
-             daneDiv = document.getElementById("translate_lang");
-             daneDiv.innerHTML = "<span><b>"+ dane.lang + "</b></span>";
-            //contact info
-            daneDiv = document.getElementById("translate_contact");
-            daneDiv.innerHTML = "<span><b>"+ dane.contact + "</b></span>";
+            //glowna
+            $("#translate_home").html("<span><b>"+ dane.home + "</b></span>");
 
+            //galeria
+            $("#translate_gallery").html("<span><b>"+ dane.gallery + "</b></span>");
+            
+            //tytul strony
+            $("#translate_page_title").html(dane.page_title);
+
+            //jezyk
+            $("#translate_lang").html("<span><b>"+ dane.lang + "</b></span>");
+
+            //kontakt
+            $("#translate_contact").html("<span><b>"+ dane.contact + "</b></span>");
+
+            //copyright
+            $("#translate_copyright").html("<span><b>"+ dane.copyright + "</b></span>");
+
+            //darkmode
+            $("#translate_darkmode").html("<span><b>"+ dane.darkmode + "</b></span>");
         }
     };
-    xhr.open("GET", "../translations/pl.json", true);
+    //Otwarcie pliku json na podstawie jezyka przechowywanego w ciasteczku
+    xhr.open("GET", "../translations/"+cookieJezyk+".json", true);
     xhr.send();
 }
-
-// function zaladujJezyki() {
-// var divs = "";
-// for (var i = 0; i < jezyki.length; i++) {
-//   divs += "<a>" + jezyki[i] + "</a><br>";
-// }
-// document.getElementById("jezyki").innerHTML = divs;
-// }
-
-
-// window.onload = addEventListener("load", zaladujJezyki);
 window.onload = addEventListener("load", zaladujDane);
-
-
-
-// daneDiv = document.getElementById("translate_cookies_info");
-// daneDiv.innerHTML = "<span>"+ dane.cookies_info + "</span>";
-
-// daneDiv = document.getElementById("translate_cookies_accept");
-// daneDiv.innerHTML = "<span>"+ dane.cookies_accept + "</span>";
-
-// daneDiv = document.getElementById("translate_cookies_more");
-// daneDiv.innerHTML = "<span>"+ dane.cookies_more + "</span>";
-
-// daneDiv = document.getElementById("translate_cookies_link");
-// daneDiv.innerHTML = '<a href="'+dane.cookies_link+'">'+dane.cookies_more+'</a>';
-
-// daneDiv = document.getElementById("translate_home");
-// daneDiv.innerHTML = "<span>"+ dane.home + "</span>";
-
-// daneDiv = document.getElementById("translate_more");
-// daneDiv.innerHTML = "<span>"+ dane.more + "</span>";
-
-// daneDiv = document.getElementById("translate_contact");
-// daneDiv.innerHTML = "<span>"+ dane.contact + "</span>";

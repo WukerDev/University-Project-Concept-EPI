@@ -1,6 +1,6 @@
 //Config
 //Languages to be displayed
-var jezyki=["EN", "PL", "RU", "UA", "DE", "FR", "ES", "IT"];
+var jezyki=["EN", "PL", "RU", "UA", "DE", "FR", "ES", "IT", "PT", "JP", "KO", "ZH", "IN"];
 
 
 

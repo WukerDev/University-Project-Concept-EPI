@@ -33,7 +33,7 @@ $(document).ready(function() {
     $.each(jezyki, function(index, value) {
         if (value != cookieJezyk) {
             var flagImg = $("<img width=20 height=20 >").attr("src", "../assets/flags/" + value + ".png");
-            var listItem = $("<a onClick='changeLang(\""+value+"\")'>").append(flagImg).append(" "+value);
+            var listItem = $("<a style=\"display:flex;\" onClick='changeLang(\""+value+"\")'>").append(flagImg).append("<span>"+value+"</span>");
             theDiv.append(listItem);
         }
     });
@@ -67,7 +67,7 @@ function zaladujDane() {
             $("#translate_page_title").html(dane.page_title);
 
             //jezyk
-            $("#translate_lang").html("<span><b>"+ dane.lang + "</b></span>");
+            $("#translate_lang").html("<span style=\"align-items:center;\"><img style=\"height:auto;margin:0px 2px;\" width=20 height=22 src=\"../assets/flags/"+dane.lang+".png\"><b>"+ dane.lang + "</b></span>");
 
             //kontakt
             $("#translate_contact").html("<span><b>"+ dane.contact + "</b></span>");

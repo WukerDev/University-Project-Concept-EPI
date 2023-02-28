@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ruda:wght@700&display=swap');
+
 body{
     margin: 0px;
     padding: 0px;
     color: var(--text-color);
-    font-family: 'Super Sans', sans-serif;
+    font-family: 'Didact Gothic', sans-serif;
     background-color: var(--secondary-color);
     margin-top: 120px;
 }
@@ -66,12 +69,14 @@ body{
     top: 0;
     color: var(--text-color);
     background-color: var(--primary-color);
-    font-size: 16px;
+    font-size: 18px;
     border-bottom: 1px solid #eee;
     box-shadow: rgba(0,0,0,0.2) 2px 5px 10px;
     display: flex;
     align-items: center;
     z-index: 2;
+    font-family: 'Ruda', sans-serif;
+
 }
 .main ul{
     display: flex;
@@ -115,6 +120,10 @@ social-media, social-media > img{
 .navbar .languageclass span{
     color: var(--text-color);
 }
+#translate_lang b{
+    height: 20px;
+    width: 20px;
+}
 .speen {
     animation: spin 2s infinite linear
 }
@@ -150,8 +159,11 @@ social-media, social-media > img{
     clear: both;
     font-size: 14px;
     text-decoration: none;
-    text-align: center;
     flex: 0 0 100%;
+}
+.dropdown-menu a span{
+    height: 20px;
+    width: 20px;
 }
 .dropdown-menu a:hover{
     background-color: rgba(0,0,0,0.1);
@@ -284,3 +296,21 @@ span.highlight{ /* POGRUBIENIE I POWIĘKSZENIE TEKSTU */
     border-radius: 25px;
     box-shadow: rgba(0,0,0,0.2) 2px 5px 10px;   
 }
+
+
+  /* Scroll*/
+::-webkit-scrollbar {
+    width: 10px;
+    background: transparent;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #293b97 
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #101b57; 
+  }
+
+

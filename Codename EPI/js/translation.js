@@ -1,6 +1,6 @@
 //Config
 //Dostepne jezyki
-var jezyki=["EN", "PL", "RU", "UA", "DE", "FR", "ES", "IT", "PT", "JP", "KO", "ZH", "IN"];
+var jezyki=["EN", "PL", "RU", "UA", "DE", "FR", "ES", "IT", "PT", "JP", "KO", "CN", "IN"];
 var currentJezyk = "PL";
 var cookieJezyk = getCookie("jezyk");
 
@@ -32,17 +32,23 @@ $(document).ready(function() {
     var theDiv = $(".dropdown-menu");
     $.each(jezyki, function(index, value) {
         if (value != cookieJezyk) {
-            var listItem = $("<a style=\"margin:0px 2px;\" onClick='changeLang(\""+value+"\")'>").text(""+value+"");
+            var flagImg = $("<img width=20 height=20 >").attr("src", "../assets/flags/" + value + ".png");
+            var listItem = $("<a onClick='changeLang(\""+value+"\")'>").append(flagImg).append(" "+value);
             theDiv.append(listItem);
         }
     });
     $(".dropdown").append(theDiv);
 });
 
-//Funkcja zmieniajaca jezyk strony
+//Funkcja zmieniajaca jezyk strony (zmiana wartosci ciasteczka 'jezyk')
 function changeLang(language){
-    document.cookie = "jezyk="+language+"; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/";
-    location.reload();
+    if (jezyki.includes(language)) {
+        document.cookie = "jezyk="+language+"; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/";
+    }
+    else{
+        document.cookie = "jezyk=PL; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/";
+    }
+        location.reload();
 }
 
 //Funkcja ladujaca dane z pliku json

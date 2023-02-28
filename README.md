@@ -12,7 +12,7 @@ Tu będą informacje dot. naszego projektu.
 - [@Władysław Liegmanowski](https://github.com/)
 ## Dokumentacja
 
-Aby dowiedzieć się szczegółowych informacji na temat projektu przejdź do [dokumentacji](https://www.google.com).
+Aby dowiedzieć się szczegółowych informacji na temat projektu przejdź do [dokumentacji](http://sekurwaposzukaj.pl/).
 
 
 ## FAQ

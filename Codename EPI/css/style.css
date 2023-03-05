@@ -18,10 +18,10 @@ body{
     height: 25px;
     width: 25px;
 }
-
+@media screen and (max-width: 1200px) {
 .login{
     display: flex;
-    width: 45vw;
+    width: 95vw;
     height: 45vh;
     align-items: center;
     justify-content: space-between;
@@ -30,17 +30,15 @@ body{
     box-shadow: rgba(0,0,0,0.2) 2px 5px 10px;
     flex-wrap: wrap;
     flex-direction: column;
-    
-}
-#login-main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 
-#LoginHead{
-    font-size: 4vh;
+#LoginButton{
+    width: 70vw;
+    height: 5vh;
+    margin-bottom: 1vh;
+}
+#LoginHead{ 
+    font-size: 3vh;
     display : flex;
     justify-content: left;
     text-align: left;
@@ -52,6 +50,48 @@ body{
     padding-left: 5%;
     
 }
+}
+@media screen and (min-width: 1200px) {
+    .login{
+        display: flex;
+        width: 45vw;
+        height: 45vh;
+        align-items: center;
+        justify-content: space-between;
+        background-color: var(--primary-color);
+        border-radius: 15px;
+        box-shadow: rgba(0,0,0,0.2) 2px 5px 10px;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    #LoginButton{
+        width: 20vw;
+        height: 5vh;
+        margin-bottom: 1vh;
+    }
+    #LoginHead{
+        font-size: 4vh;
+        display : flex;
+        justify-content: left;
+        text-align: left;
+        width: 95%;
+        box-shadow: rgba(0,0,0,0.2) 2px 5px 10px;
+        color: var(--primary-color);
+        background-image: linear-gradient(#293b97, #101b57);
+        border-radius: 15px;
+        padding-left: 5%;
+        
+    }
+    }
+
+#login-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
 
 #LoginAsk{
     display: flex;
@@ -72,10 +112,10 @@ body{
 
 }
 
-#LoginButton{
-    width: 20vw;
-    height: 5vh;
-    margin-bottom: 2vh;
+
+
+.LoginBody{
+    overflow: hidden;
 }
 
 body > footer {

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ruda:wght@700&display=swap');
+html, body {height:100%;}
 
 body{
     margin: 0px;
@@ -8,6 +9,11 @@ body{
     font-family: 'Didact Gothic', sans-serif;
     background-color: var(--secondary-color);
     margin-top: 120px;
+}
+
+body > footer {
+    position: fixed;
+    bottom: 0;
 }
 
 /* DARK THEME v0.1 */
@@ -89,17 +95,8 @@ prawo-p{ /* USTAWIANIE ELEMENTÓW PO PRAWO W NAVBARZE */
     justify-content: flex-end;
     margin-left: auto;
 }
-social-media, social-media > img{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    opacity:1;
-    padding-top: 2px;
-    margin-bottom:0;
-    filter: invert(100%) sepia(0%) saturate(7489%) hue-rotate(49deg) brightness(124%) contrast(99%);
-    gap: 5px;
-}
+
+
 
 .navbar li{
     display: flex;
@@ -109,6 +106,7 @@ social-media, social-media > img{
     background-color: var(--primary-color);
     align-items: center;
 }
+
 .navbar li span {
     display: flex;
     text-align: center;
@@ -132,46 +130,7 @@ social-media, social-media > img{
     margin: 5px 10px;
     vertical-align: middle;
 }
-.dropdown{
-    position: relative;
-    display: flex;
-    justify-content: center;
-}
-.dropdown-menu::-webkit-scrollbar{
-    display: none;
-}
-.dropdown-menu{
-    position: absolute;
-    right: 2px;
-    display: none;
-    background-color: var(--primary-color);
-    margin-top: 78px;
-    box-shadow: rgba(0,0,0,0.3) 0px 5px 5px;
-    flex-direction: column;
-    max-height: 180px;
-    overflow-y: auto;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
-.dropdown-menu a{
-    color: var(--text-color);
-    padding: 10px 25px;
-    clear: both;
-    font-size: 14px;
-    text-decoration: none;
-    flex: 0 0 100%;
-}
-.dropdown-menu a span{
-    height: 20px;
-    width: 20px;
-}
-.dropdown-menu a:hover{
-    background-color: rgba(0,0,0,0.1);
-    cursor: pointer;
-}
-.dropdown:hover .dropdown-menu{
-    display: flex;
-}
+
 
 /* ANIMACJA KRĘCENIA */
 @keyframes spin {
@@ -184,13 +143,66 @@ social-media, social-media > img{
     }
 }
 
-
-
-/* SOCIAL MEDIA */
-.social-icon > img{
-    width: 3em;
-    height: 3em;
+/* NAVBAR MOBILE */
+borgier-mobile{
+    padding: 0px 30px;
+    list-style-type: none;
+    justify-content: flex-end;
+    align-items: center;
+    display: flex;
+    margin-left: auto;
 }
+.mobile-bars{
+    font-size: 2em;
+}
+.mobile-navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+}
+.mobile-navbar-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    opacity: 0.5;
+    z-index: 5;
+}
+.mobile-navbar-inner{ 
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #fff;
+    z-index: 6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+.mobile-navbar > ul > li{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px 50px;
+}
+.mobile-navbar > ul > li span{
+    color: #000;
+}
+
+
 
 social-media-embeded{
     display: flex;
@@ -243,33 +255,6 @@ social-media-embeded > div {
     }
 }
 
-/* STOPKA */
-footer{
-    padding:2px 0;
-    color: var(--primary-color);
-    background-image: linear-gradient(#293b97, #101b57);
-    text-align:center;
-    opacity:1;
-    font-size:13px;
-    display: flex;
-    flex-direction: column;  
-}
-social-media-herb > img{
-    opacity:1;
-    padding-top: 5px;
-    margin-bottom:0;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    width: 150px;
-    height: 150px;
-    padding: 10px 0px;
-    color : var(--primary-color);
-    filter: invert(100%) sepia(0%) saturate(7489%) hue-rotate(49deg) brightness(124%) contrast(99%);
-}
-social-media-herb{
-    filter: invert(100%) sepia(0%) saturate(7489%) hue-rotate(49deg) brightness(124%) contrast(99%);
-}
 
 /* KONTENT STRONY */
 .content{
@@ -298,19 +283,6 @@ span.highlight{ /* POGRUBIENIE I POWIĘKSZENIE TEKSTU */
 }
 
 
-  /* Scroll*/
-::-webkit-scrollbar {
-    width: 10px;
-    background: transparent;
-  }
-  ::-webkit-scrollbar-track {
-    background: transparent;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: #293b97 
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    background: #101b57; 
-  }
+
 
 

@@ -12,7 +12,7 @@
 }
 
 .karta {
-    
+    text-align: left;
     font-size: 2.7vh;
     display: inline-block;
     background-color: var(--primary-color); 
@@ -23,16 +23,25 @@
     padding: 20px;
     box-sizing: border-box; 
 
+    
+    overflow: hidden;
+
     transition: 0.5s;
-    cursor: pointer;
+    cursor: text;
     
-    overflow: hidden; 
-    
+   
+    min-width: 5vw; 
+    max-width: 50%;
     margin: 1vw;
     min-height: 10%;
     max-height: 20%;
-    width: 15vw;
+   
     position: relative;
+}
+#codeSnippet{
+   min-width: 80%;
+   overflow-y: scroll;
+   overflow-x: scroll;
 }
 #karta2
 {
@@ -41,7 +50,7 @@
       
 }
 #kartaArticle{
-    
+    min-width: 95%;
     width: 95%;
    margin:0 auto;
     text-align: left;

@@ -58,25 +58,25 @@ function zaladujDane() {
         if (xhr.readyState == 4 && xhr.status == 200) {
             var dane = JSON.parse(xhr.responseText);
             //glowna
-            $("#translate_home").html("<span><b>"+ dane.home + "</b></span>");
+            $(".translate_home").html("<span><b>"+ dane.home + "</b></span>");
 
             //galeria
-            $("#translate_gallery").html("<span><b>"+ dane.gallery + "</b></span>");
+            $(".translate_gallery").html("<span><b>"+ dane.gallery + "</b></span>");
             
             //tytul strony
-            $("#translate_page_title").html(dane.page_title);
+            $(".translate_page_title").html(dane.page_title);
 
             //jezyk
-            $("#translate_lang").html("<span style=\"align-items:center;\"><img style=\"height:auto;margin:0px 2px;\" width=20 height=22 src=\"../assets/flags/"+dane.lang+".png\"><b>"+ dane.lang + "</b></span>");
+            $(".translate_lang").html("<span style=\"align-items:center;\"><img style=\"height:auto;margin:0px 2px;\" width=20 height=22 src=\"../assets/flags/"+dane.lang+".png\"><b>"+ dane.lang + "</b></span>");
 
             //kontakt
-            $("#translate_contact").html("<span><b>"+ dane.contact + "</b></span>");
+            $(".translate_contact").html("<span><b>"+ dane.contact + "</b></span>");
 
             //copyright
-            $("#translate_copyright").html("<span><b>"+ dane.copyright + "</b></span>");
+            $(".translate_copyright").html("<span><b>"+ dane.copyright + "</b></span>");
 
             //darkmode
-            $("#translate_darkmode").html("<span><b>"+ dane.darkmode + "</b></span>");
+            $(".translate_darkmode").html("<span><b>"+ dane.darkmode + "</b></span>");
         }
     };
     //Otwarcie pliku json na podstawie jezyka przechowywanego w ciasteczku

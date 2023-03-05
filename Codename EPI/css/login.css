@@ -1,0 +1,154 @@
+@media screen and (max-width: 1200px) {
+    .login{
+        display: flex;
+        width: 95vw;
+        height: 45vh;
+        align-items: center;
+        justify-content: space-between;
+        background-color: var(--primary-color);
+        border-radius: 15px;
+        box-shadow: rgba(0,0,0,0.2) 2px 5px 10px;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    
+    #LoginButton {
+        background-image: linear-gradient(#293b97, #101b57);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 2vh;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        box-shadow: rgba(0, 0, 0, 0.2) 2px 5px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        width: 80vw; 
+    
+      }
+      #LoginButton:hover {
+        background-image: linear-gradient(#101b57, #293b97);
+        box-shadow: rgba(0, 0, 0, 0.4) 2px 5px 10px;
+      }
+    
+      
+      #LoginHead { 
+        font-size: 3vh;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        width: 85vw;
+        box-shadow: rgba(0, 0, 0, 0.4) 2px 5px 10px;
+        color: white;
+        background: linear-gradient(to left, #101b57, #293b97);
+        border-radius: 15px;
+        padding: 0 5vw;
+        text-shadow: 1px 1px #000000;
+        
+    }
+    }
+    @media screen and (min-width: 1200px) {
+        .login{
+            display: flex;
+            width: 45vw;
+            height: 45vh;
+            align-items: center;
+            justify-content: space-between;
+            background-color: var(--primary-color);
+            border-radius: 15px;
+            box-shadow: rgba(0,0,0,0.2) 2px 5px 10px;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+        #LoginButton {
+            background-image: linear-gradient(#293b97, #101b57);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 2vh;
+            cursor: pointer;
+            transition: all 0.5s ease;
+            box-shadow: rgba(0, 0, 0, 0.2) 2px 5px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            width: 12vw; 
+          }
+          #LoginButton:hover {
+            background-image: linear-gradient(#101b57, #293b97);
+            box-shadow: rgba(0, 0, 0, 0.4) 2px 5px 10px;
+          }
+    
+          
+          #LoginHead { 
+            font-size: 3vh;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            width: 95%;
+            box-shadow: rgba(0, 0, 0, 0.4) 2px 5px 10px;
+            color: white;
+            background: linear-gradient(to left, #101b57, #293b97);
+            border-radius: 15px;
+            padding: 0 1rem;
+            text-shadow: 1px 1px #000000;
+            margin-bottom: 4vh;
+          }
+        }
+    
+    #login-main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 60%;
+    }
+    
+    
+    
+    #LoginAsk{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        font-size: 2vh;
+        margin-top: 2vh;
+        gap: 15vw;
+      }
+      
+    
+    
+    
+      .LoginData {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 2vh;
+      }
+      
+      .LoginData input[type="text"], 
+      .LoginData input[type="password"] {
+        width: 100%;
+        padding: 5px;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        margin: 5px 0;
+        box-sizing: border-box;
+        font-size: 2vh;
+      }
+      
+     
+      
+    
+    
+    
+    .LoginBody{
+        overflow: hidden;
+    }
+    

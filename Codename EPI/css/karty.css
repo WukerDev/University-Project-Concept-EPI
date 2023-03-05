@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ruda:wght@700&display=swap');
+
+/* Path: karty.css */
+#kontener{
+    text-align: center;
+  
+}
+#kontener > h1{
+    text-align: center;
+    font-size: 5vh;
+}
+
+.karta {
+    
+    font-size: 2.7vh;
+    display: inline-block;
+    background-color: var(--primary-color); 
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box; 
+
+    transition: 0.5s;
+    cursor: pointer;
+    
+    overflow: hidden; 
+    
+    margin: 1vw;
+    min-height: 10%;
+    max-height: 20%;
+    width: 15vw;
+    position: relative;
+}
+#karta2
+{
+    
+    background-color: red;
+      
+}
+#kartaArticle{
+    
+    width: 95%;
+   margin:0 auto;
+    text-align: left;
+}
+.karta p
+{
+    margin: 0px;
+}

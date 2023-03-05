@@ -14,3 +14,6 @@ $(document).ready(function() {
         return false;
     });
 });
+function printElement() {
+    console.log($('body'));
+}

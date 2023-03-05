@@ -2,10 +2,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-
     <!-- META -->
     <meta charset="UTF-8">
-    <meta viewport="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
     <meta name="apple-mobile-web-app-title" content="UKW Koło Naukowe">
     <meta name="application-name" content="UKW Koło Naukowe">
     <meta name="msapplication-TileColor" content="#da532c">
@@ -13,8 +12,13 @@
     <meta name="theme-color" content="#ffffff">
 
     <!-- CSS -->
+    <link rel="stylesheet" href="../css/karty.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/hover-min.css">
+    <link rel="stylesheet" href="../footer/footer.css">
+    <link rel="stylesheet" href="../css/scroll.css">
+    <link rel="stylesheet" href="../css/dropdown.css">
+
 
     <!-- TITLE -->
     <title id="translate_page_title">TEST</title>
@@ -26,17 +30,28 @@
 
     <!-- SCRIPTS -->
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+        <script src="../js/mobile-navbar.js"></script>
+
     <script src="https://kit.fontawesome.com/dea6e96ac2.js" crossorigin="anonymous"></script>
     <script src="../js/translation.js"></script>
     <script src="../js/test.js"></script>
     <script src="../js/darkmodeFlip.js"></script>
     <script src="../js/loader.js"></script>
+    <script src="../js/mobile-navbar.js"></script>
+    <!-- <script src="../js/detectMobile.js"></script> -->
+
+    <!-- HEADER AND FOOTER -->
+    <script> 
+        $(function(){
+            $("#footer").load("../footer/footer.html"); 
+        });
+    </script> 
+    <!-- <div id="footer"></div> -->
 
     <!-- ICONS -->
     <link rel="apple-touch-icon" sizes="76x76" href="https://drive.google.com/uc?id=14GIp3a3IxieImciPy8vdD6pR5dJGjf6S">
     <link rel="icon" type="image/png" sizes="32x32" href="https://drive.google.com/uc?id=1yBZoKf1PtZVUM58aiPz68ZLX8SjgJwx3">
     <link rel="icon" type="image/png" sizes="16x16" href="https://drive.google.com/uc?id=1c5efSqg4HNZyt_iuhMACfj4766mj4WmH">
-    <link rel="manifest" href="site.webmanifest">
     <link rel="mask-icon" href="https://drive.google.com/uc?id=1tjG_nrJa5sREyI_AfyEDwuVgRTAfP7hB" color="#5bbad5">
     <link rel="shortcut icon" href="https://drive.google.com/uc?id=1xXGXPhMpxz3ewEI7gC2RdvmNSTpKfHfB">
 
@@ -45,9 +60,24 @@
     <div id="loader">
         <h2><i class="far fa-spinner-third"></i></h2>
     </div>
+
+<!-- MOBILE NAV -->
+    <div class="mobile-navbar">
+        <ul class="mobile-navbar-inner">
+            <li class="mobile-navbar-inner-item"><span><i class="fas fa-moon"></i></span></li>
+            <li class="mobile-navbar-inner-item hvr-underline-from-center"><span>Home</span></li>
+            <li class="mobile-navbar-inner-item hvr-underline-from-center"><span>Gallery</span></li>
+            <li class="mobile-navbar-inner-item hvr-underline-from-center"><span>Contact</span></li>
+        </ul>
+        <div class="mobile-navbar-overlay"></div>
+    </div>
+
+<!-- SCROLL TO TOP BUTTON -->
     <div class="scroll-top-container">
         <button id="scroll-top"><i class="fas fa-level-up"></i></button>
     </div>
+
+<!-- SITE -->
     <div class="main">
         <ul class="navbar">
             <li class="notdropdown"><span><img src="https://www.ukw.edu.pl/img/ukw.svg" alt="Uniwersytet Kazimierza Wielkiego w Bydgoszczy" class="hvr-grow hvr-float"></span></li>
@@ -62,72 +92,44 @@
                     </div>
                 </div>
             </prawo-p>
+            <borgier-mobile>
+                <li class="mobile-bars"><i class="fas fa-bars"></i></li>
+            </borgier-mobile>
         </ul>
-        <div class="content" >
+
+        <div class="content">
             <p><span class="highlight">Lorem</span> ipsum dolor sit amet, consectetur adipiscing elit. Duis quis libero tortor. Fusce eu magna arcu. Phasellus ac pellentesque ante. Integer eu auctor massa. Nam nec mi vel sem laoreet imperdiet a suscipit sem. Nulla sed tincidunt risus. Nam molestie eu dui varius vulputate. Vivamus commodo mi id nunc sodales malesuada. Fusce nec neque eget erat placerat pretium. Donec tincidunt tellus a libero mollis, at mattis turpis commodo. Donec non odio dapibus, aliquam odio quis, euismod orci.</p>
             <img class="galera" src="https://picsum.photos/800/300">
-            <p><span class="highlight">Sed vulputate</span> , nulla non pulvinar suscipit, magna lectus faucibus mauris, eu consectetur orci nisi malesuada nibh. Praesent metus ligula, vulputate rhoncus interdum at, ullamcorper non lacus. Vestibulum euismod enim et mi rutrum placerat. Donec ultrices cursus nulla id posuere. Cras cursus at lectus non ultricies. Sed ultricies ex massa, in malesuada massa placerat a. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur vitae enim faucibus, imperdiet dui suscipit, tincidunt nibh. Vestibulum vel pretium eros. Quisque non porttitor nisl. Morbi augue mi, egestas in mi quis, tempus auctor nulla. Cras dictum nunc ante, a hendrerit magna consequat sit amet. Mauris molestie consectetur lorem, sed pharetra tortor congue in. Sed non arcu id ligula maximus pellentesque a ut arcu. Aenean gravida suscipit metus at commodo.</p>
+            <p>Uniwersytet Kazimierza Wielkiego w Bydgoszczy to jedna z najważniejszych uczelni w regionie kujawsko-pomorskim. Założony w 1969 roku, przez wiele lat pełnił rolę filii Uniwersytetu Mikołaja Kopernika w Toruniu, a od 2005 roku funkcjonuje jako samodzielna uczelnia. W swojej historii Uczelnia przeszła wiele zmian, ale zawsze pozostawała jednym z ważniejszych ośrodków naukowych w Polsce.
 
-            <p>Vivamus ut libero nec lacus tempus condimentum et a purus. Morbi vulputate iaculis arcu non rhoncus. Cras dignissim facilisis nunc, at tempus metus convallis sed. Mauris varius, justo non mattis tincidunt, est lectus vulputate turpis, et gravida sem orci a dolor. Aliquam ut felis bibendum, consequat nulla nec, tempus velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec sit amet malesuada ipsum, sit amet molestie elit. Morbi ut enim arcu. Donec felis ex, dictum ac efficitur at, fermentum vitae diam.</p>
-
-            <p>Maecenas et sem hendrerit, laoreet metus et, ultricies mauris. Integer suscipit finibus sem eget mattis. Maecenas eu porttitor nisi, sit amet dictum dui. Vestibulum interdum magna nec metus scelerisque lacinia. Nam ac mattis magna. Maecenas ac turpis ligula. Curabitur euismod eros vitae ex tincidunt, nec laoreet metus viverra. Maecenas aliquam mollis ex, ut finibus erat. Cras a ligula auctor, commodo arcu sed, iaculis lectus. Suspendisse ut ipsum gravida sapien facilisis faucibus et ac dui. Proin laoreet est non convallis mattis. Ut quis ultricies urna, et varius turpis.</p>
-
-            <p>Integer vel tempor quam, nec rhoncus augue. Phasellus posuere augue at enim pulvinar tempus. Vivamus lorem nulla, euismod non ipsum sit amet, ornare dapibus ex. Etiam congue fringilla metus. Ut sed fringilla nulla, id feugiat tortor. Aenean quis bibendum tellus. Nullam mollis tincidunt elit, id bibendum tellus sollicitudin quis. Cras sed ultrices turpis. Morbi semper non mi sed mattis. Suspendisse sed vulputate lectus, quis bibendum dui. Ut hendrerit justo ut nulla molestie convallis. Aenean quis porttitor mi. Maecenas turpis ipsum, bibendum quis urna eu, malesuada cursus nunc. Vivamus nec arcu sit amet nisi vulputate tempus. Aliquam eget sagittis lectus.</p>
-
-            <p>Phasellus mi felis, blandit sed vulputate ut, sodales ultrices elit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In volutpat feugiat suscipit. Donec tristique dapibus nisl eu pretium. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur in semper arcu, eu ullamcorper urna. Nam iaculis tristique malesuada. Donec luctus nibh venenatis elit sagittis, quis tristique dolor porta. Nam vehicula mi dolor, vitae fringilla odio finibus vel.</p>
-
-            <p>Donec ac velit finibus libero malesuada mollis id eget neque. In a massa in lorem tempor dignissim. Ut congue nec lorem a gravida. Cras mauris sem, consectetur ac aliquam non, tincidunt ut lectus. Ut ut sollicitudin turpis, non ornare ex. Maecenas egestas, metus nec imperdiet rutrum, est mauris mattis metus, eget aliquam lorem nulla vitae ex. Duis convallis lobortis justo, ac tincidunt sapien suscipit sit amet. Etiam porttitor tellus a metus mollis condimentum. Nam nec convallis justo. Curabitur fringilla felis eleifend ex blandit vestibulum. Vestibulum laoreet elit eget libero finibus dictum. Duis sodales tempus tellus sit amet laoreet. Aenean fringilla volutpat nisi non egestas. Donec posuere sed arcu ut pretium. Quisque eleifend, est id blandit scelerisque, augue arcu facilisis ex, at auctor mi elit non justo. Aliquam in est in magna molestie vestibulum.</p>
-
-            <p>Mauris et nisi dolor. Nam viverra risus vel mi aliquet ullamcorper. Donec non odio a justo pulvinar eleifend id nec neque. Ut lobortis neque vitae nulla hendrerit, eu accumsan erat laoreet. Suspendisse et leo at justo facilisis convallis in tempor diam. Cras interdum dolor vitae ante porta, ut fermentum lacus mollis. Proin suscipit nulla ac massa molestie tristique.</p>
-
-            <p>Duis porta sapien eu enim fringilla efficitur. Vivamus dapibus a ex quis aliquet. Phasellus vel turpis egestas lectus vestibulum tempus. Nunc ullamcorper leo tempus egestas dapibus. Duis sit amet dolor eget est ullamcorper condimentum. Ut consectetur dolor volutpat, suscipit arcu in, eleifend justo. Nunc et sem erat. Curabitur vel odio mauris.</p>
-
-            <p>Nam et est non lorem maximus euismod ut et mi. Nunc nec feugiat orci, eu iaculis lorem. Maecenas pellentesque augue eros, vitae tempus nisi pharetra et. Donec risus leo, tempus ac ante dignissim, finibus imperdiet nunc. Nulla non venenatis leo. Praesent volutpat pretium velit, dignissim posuere dolor sollicitudin dignissim. Nam auctor lectus ante, in commodo nisi sagittis sit amet. Duis non eros in nisi auctor consectetur. Ut sit amet facilisis metus. Pellentesque non sapien eu ante tincidunt vestibulum. Etiam ultrices dignissim sem in iaculis. Aliquam vitae lacinia mauris. Vivamus vel ex nec purus congue fringilla. Sed posuere eget nisi non commodo.</p>
-
-            <p>Morbi vitae nibh volutpat, dignissim sem nec, feugiat dui. Morbi auctor dui sed tellus sodales hendrerit sed et urna. In vitae eleifend nibh. Aliquam ultricies ex at tortor pellentesque consequat. Aenean iaculis mauris id quam blandit finibus in in neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; In congue lacus in congue pulvinar. Nulla eget feugiat tortor.</p>
-
-            <p>Duis fringilla lorem at maximus mattis. Phasellus ut neque eget diam pharetra euismod. Praesent sagittis ultricies leo, at ultricies libero dapibus vitae. Donec et commodo nisl. Vivamus aliquet ipsum rhoncus metus laoreet porttitor. Nam et faucibus est, sed consectetur sem. Sed tincidunt neque sed semper vestibulum. Pellentesque in libero et nibh tempor lacinia. Mauris tempus eros et nibh suscipit, a cursus quam vestibulum. Ut ornare, diam venenatis porta aliquet, mi enim lacinia purus, at luctus purus lacus pulvinar tellus. Curabitur eu vestibulum ante. Donec scelerisque lobortis lorem eget rhoncus. Donec aliquet cursus ipsum, eget mollis lacus dignissim ac.</p>
-
-            <p>Aliquam non eleifend velit, sed tempor sem. Proin leo leo, dapibus ultricies aliquam vel, tempor nec dui. Morbi et elementum dolor. Cras et efficitur orci. Sed ut diam nec nisi facilisis semper. Vivamus quam sem, pretium ac egestas nec, bibendum nec leo. Mauris tempus pellentesque aliquam. Proin nunc erat, congue et enim quis, hendrerit suscipit orci. Integer ac consequat dui. Praesent vitae facilisis ipsum. Donec posuere, purus eget mattis consectetur, lorem elit eleifend nulla, quis commodo lectus felis a magna. Nam blandit pellentesque dolor ac tristique. Nam et turpis id tortor suscipit scelerisque sit amet ut lectus. Curabitur elementum lacus nec augue fringilla mattis. Proin nec condimentum tortor. Mauris porttitor velit vel lorem volutpat, eu aliquam metus fermentum.</p>
-
-            <p>Pellentesque commodo tempor dolor, eget porttitor lacus. Sed posuere odio dolor. Vivamus tortor massa, consectetur at viverra quis, imperdiet eu mauris. Aenean semper ultrices diam, quis dictum odio aliquam a. Aenean ultricies mauris non libero fringilla lacinia. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in massa congue, sollicitudin mauris eu, suscipit dui. Nulla sit amet dignissim urna. Aliquam feugiat convallis libero quis volutpat. Aenean in sapien condimentum, volutpat neque hendrerit, imperdiet risus.</p>
-
-           <p>Sed ut urna fringilla, auctor tortor at, suscipit quam. Nunc mollis, velit eget blandit porta, lorem velit varius ante, id vestibulum augue eros et nisi. Duis vel porta velit, at semper nulla. Etiam fringilla hendrerit justo, ut vulputate nisl porta ut. Fusce eu eros eu arcu malesuada aliquam quis eget urna. Nulla et arcu quam. Phasellus non sagittis eros. Aliquam quis blandit nisi. Aliquam lorem leo, faucibus quis orci et, convallis lacinia justo. Donec ullamcorper suscipit lectus, ac rutrum tellus vestibulum ut. </p>
+                Uniwersytet Kazimierza Wielkiego oferuje szeroki wybór kierunków studiów, zarówno w trybie stacjonarnym, jak i niestacjonarnym. Wśród kierunków znajdują się m.in. nauki humanistyczne, prawo, ekonomia, nauki społeczne, nauki o zdrowiu, nauki przyrodnicze oraz matematyczno-fizyczne. Uczelnia oferuje także wiele programów doktoranckich oraz podyplomowych.
+                
+                Uczelnia zatrudnia doświadczoną kadrę naukową, składającą się z wybitnych specjalistów w swoich dziedzinach. Współpracują oni z uczelniami i instytucjami naukowymi na całym świecie oraz biorą udział w licznych projektach badawczych.
+                
+                Uniwersytet Kazimierza Wielkiego posiada bogatą infrastrukturę naukową, w skład której wchodzą m.in. laboratoria badawcze, biblioteka, sale wykładowe, aula oraz nowoczesne obiekty sportowe. Uczelnia jest także wyposażona w nowoczesne zaplecze IT, co umożliwia studentom korzystanie z najnowocześniejszych narzędzi naukowych.
+                
+                Uniwersytet Kazimierza Wielkiego w Bydgoszczy to nie tylko miejsce kształcenia, ale także liczne organizacje studenckie oraz kluby naukowe. Dzięki temu studenci mają możliwość rozwijania swoich zainteresowań oraz nawiązywania cennych kontaktów, co pozwala im na zdobycie cennego doświadczenia i wiedzy.
+                
+                Podsumowując, Uniwersytet Kazimierza Wielkiego w Bydgoszczy to czołowa uczelnia w regionie, oferująca szeroki wybór kierunków studiów oraz bogatą infrastrukturę naukową. Uczelnia jest znana z wysokiego poziomu nauczania oraz doskonałej kadry naukowej, co przekłada się na sukcesy studentów i absolwentów.</p>
         </div>
         <div>
             <!-- NEWS -->
             <social-media-embeded>
                     <div class="news"> 
+                        <!--
                         <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v16.0" nonce="t7r1LifC"></script>
                         <div class="fb-page" data-href="https://www.facebook.com/ukwbydgoszcz/"  data-tabs="timeline" data-width="500" data-height="600" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/ukwbydgoszcz/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/ukwbydgoszcz/">Uniwersytet Kazimierza Wielkiego w Bydgoszczy</a></blockquote></div>
                         <iframe class="ig-page" src="https://www.instagram.com/ukwbydgoszcz/embed" width="500" height="600" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
                         <a class="twitter-timeline" data-width="500" data-height="600" data-theme="light" href="https://twitter.com/UKWBydgoszcz?ref_src=twsrc%5Etfw"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>        
-            </social-media-embeded>
+                         -->
+                    </social-media-embeded>
             </div>
     </div>
 
    
     
 <!-- FOOTER -->
-        <footer>
-                  <!-- LOGO -->
-                    <social-media-herb>    
-                        <img src="https://www.ukw.edu.pl/img/ukw-herb.svg">
-                    </social-media-herb>
-                        <!-- SOCIAL MEDIA ICONS -->
-                        <social-media>
-                        <a href="https://www.facebook.com/ukwbydgoszcz" target="_blank" class="social-icon"><img src="../assets/facebook.svg" class="hvr-grow hvr-float"></a>
-                        <a href="https://www.instagram.com/ukwbydgoszcz" target="_blank" class="social-icon"><img src="../assets/instagram.svg" class="hvr-grow hvr-float"></a>
-                        <a href="https://twitter.com/UKWBydgoszcz" target="_blank" class="social-icon"><img src="../assets/twitter.svg" class="hvr-grow hvr-float"></a>
-                        <a href="https://www.linkedin.com/school/uniwersytet-kazimierza-wielkiego/?originalSubdomain=pl" target="_blank" class="social-icon" ><img src="../assets/linkedin.svg" class="hvr-grow hvr-float"></a>
-                        <a href="https://www.youtube.com/ukwbydgoszcz" target="_blank" class="social-icon"><img src="../assets/youtube.svg" class="hvr-grow hvr-float"></a>
-                    </social-media>
-                <p class="copyright" id="translate_copyright">
-                    ©2023 ⌛
-                </p> 
-</footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+<div id="footer"></div>
 </body>
 
 

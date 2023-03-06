@@ -304,8 +304,8 @@ span.highlight{ /* POGRUBIENIE I POWIĘKSZENIE TEKSTU */
     border-radius: 25px;
     box-shadow: rgba(0,0,0,0.2) 2px 5px 10px;   
 }
+/* ARTICLES SECTION */
 
-
-
-
-
+#articles .article{
+    padding-inline: 2rem;
+}

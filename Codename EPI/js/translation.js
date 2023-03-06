@@ -4,6 +4,11 @@ var jezyki=["EN", "PL", "RU", "UA", "DE", "FR", "ES", "IT", "PT", "JP", "KO", "C
 var currentJezyk = "PL";
 var cookieJezyk = getCookie("jezyk");
 
+//Funkcja do otwierania linku po kliknieciu
+function openLink(link) {
+    window.open(link, '_blank');
+}
+
 //Funkcja do odczytywania ciasteczka
 function getCookie(cname) {
     let name = cname + "=";
@@ -58,10 +63,14 @@ function zaladujDane() {
         if (xhr.readyState == 4 && xhr.status == 200) {
             var dane = JSON.parse(xhr.responseText);
             //glowna
-            $(".translate_home").html("<span><b>"+ dane.home + "</b></span>");
+            $(".translate_home").html('<span><b>' + dane.home + "</b></span>").click(function() {
+                window.location.href = "home.html";
+            });
 
             //galeria
-            $(".translate_gallery").html("<span><b>"+ dane.gallery + "</b></span>");
+            $(".translate_gallery").html("<span><b>"+ dane.gallery + "</b></span>").click(function() {
+                window.location.href = "gallery.html";
+            });
             
             //tytul strony
             $(".translate_page_title").html(dane.page_title);
@@ -70,7 +79,9 @@ function zaladujDane() {
             $(".translate_lang").html("<span style=\"align-items:center;\"><img style=\"height:auto;margin:0px 2px;\" width=20 height=22 src=\"../assets/flags/"+dane.lang+".png\"><b>"+ dane.lang + "</b></span>");
 
             //kontakt
-            $(".translate_contact").html("<span><b>"+ dane.contact + "</b></span>");
+            $(".translate_contact").html("<span><b>"+ dane.contact + "</b></span>").click(function() {
+                window.location.href = "contact.html";
+            });
 
             //copyright
             $(".translate_copyright").html("<span><b>"+ dane.copyright + "</b></span>");
@@ -82,7 +93,9 @@ function zaladujDane() {
             $(".translate_loginhead").html("<span><b><p>"+ dane.LoginHead + "</p></b></span>");
 
             //login
-            $(".translate_login").html("<span>" + dane.login + "</span>");
+            $(".translate_login").html("<span>" + dane.login + "</span>").click(function() {
+                window.location.href = "login.html";
+            });
 
             //password
             $(".translate_password").html("<span>" + dane.password + "</span>");
@@ -94,7 +107,7 @@ function zaladujDane() {
             $(".translate_register").html("<span>" + dane.register + "</span>");
 
             //loginin
-            $(".translate_log_in").html("<span>" + dane.log_in + "</span>");
+            $(".translate_log_in").html("<span><b>" + dane.log_in + "</b></span>");
 
             
         }

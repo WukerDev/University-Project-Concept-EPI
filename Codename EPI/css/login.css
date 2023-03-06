@@ -50,7 +50,7 @@
         
     }
     }
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1200  px) {
         .login{
             display: flex;
             width: 42vw;
@@ -108,9 +108,6 @@
         flex-direction: column;
         height: 60%;
     }
-    
-    
-    
     #LoginAsk{
         display: flex;
         justify-content: center;
@@ -120,10 +117,6 @@
         margin-top: 2vh;
         gap: 15vw;
       }
-      
-    
-    
-    
       .LoginData {
         display: flex;
         flex-direction: column;
@@ -142,12 +135,6 @@
         box-sizing: border-box;
         font-size: 2vh;
       }
-      
-     
-      
-    
-    
-    
     .LoginBody{
         overflow: hidden;
     }

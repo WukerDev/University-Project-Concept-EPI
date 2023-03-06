@@ -17,7 +17,7 @@
         background-image: linear-gradient(#293b97, #101b57);
         color: white;
         border: none;
-        border-radius: 5px;
+        border-radius: 1  5px;
         padding: 10px 20px;
         font-size: 2vh;
         cursor: pointer;
@@ -27,11 +27,11 @@
         align-items: center;
         justify-content: center;
         gap: 5px;
-        width: 80vw; 
-    
+        width: 80vw;
+        margin-bottom: 2rem;
       }
       #LoginButton:hover {
-        background-image: linear-gradient(#101b57, #293b97);
+        background-image: linear-gradient(#2d45be, #16257a);
         box-shadow: rgba(0, 0, 0, 0.4) 2px 5px 10px;
       }
     
@@ -69,7 +69,7 @@
             background-image: linear-gradient(#293b97, #101b57);
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 15px;
             padding: 10px 20px;
             font-size: 2.5vh;
             cursor: pointer;
@@ -79,10 +79,11 @@
             align-items: center;
             justify-content: center;
             gap: 5px;
-            width: 20vw; 
+            width: 20vw;
+            margin-bottom: 2rem;
           }
           #LoginButton:hover {
-            background-image: linear-gradient(#101b57, #293b97);
+            background-image: linear-gradient(#2d45be, #16257a);
             box-shadow: rgba(0, 0, 0, 0.4) 2px 5px 10px;
           }
     
@@ -101,7 +102,7 @@
             text-shadow: 1px 1px #000000;
             margin-bottom: 4vh;
           }
-        }
+        } 
     
     #login-main{
         display: flex;

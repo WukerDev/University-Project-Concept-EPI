@@ -9,5 +9,12 @@
     "more": "Mais",
     "contact": "Contato",
     "gallery": "Galeria",
-    "copyright": "©2023 Universidade Kazimierz Wielki."
+    "copyright": "©2023 Universidade Kazimierz Wielki.",
+    "LoginHead": "ENTRAR",
+    "login": "Entrar",
+"password": "Senha",
+"noaccount": "Não tem uma conta?",
+"register": "Registrar",
+"log_in": "Entrar"
+
 }

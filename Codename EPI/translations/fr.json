@@ -9,6 +9,13 @@
 "more": "Plus",
 "contact": "Contact",
 "gallery": "Galerie",
-"copyright": "©2023 Université Kazimierz le Grand"
+"copyright": "©2023 Université Kazimierz le Grand",
+"LoginHead": "SE CONNECTER",
+"login": "Se connecter",
+"password": "Mot de passe",
+"noaccount": "Pas de compte?",
+"register": "S'inscrire",
+"log_in": "Se connecter"
+
 
 }

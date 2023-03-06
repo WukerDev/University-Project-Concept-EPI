@@ -77,6 +77,26 @@ function zaladujDane() {
 
             //darkmode
             $(".translate_darkmode").html("<span><b>"+ dane.darkmode + "</b></span>");
+
+            //login title
+            $(".translate_loginhead").html("<span><b><p>"+ dane.LoginHead + "</p></b></span>");
+
+            //login
+            $(".translate_login").html("<span>" + dane.login + "</span>");
+
+            //password
+            $(".translate_password").html("<span>" + dane.password + "</span>");
+            
+            //noacc
+            $(".translate_noaccount").html("<span>" + dane.noaccount + "</span>");
+
+            //register
+            $(".translate_register").html("<span>" + dane.register + "</span>");
+
+            //loginin
+            $(".translate_log_in").html("<span>" + dane.log_in + "</span>");
+
+            
         }
     };
     //Otwarcie pliku json na podstawie jezyka przechowywanego w ciasteczku

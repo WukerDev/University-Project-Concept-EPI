@@ -9,6 +9,13 @@
     "more": "もっと見る",
     "contact": "お問い合わせ",
     "gallery": "ギャラリー",
-    "copyright": "©2023 カジミェシュ大学"
+    "copyright": "©2023 カジミェシュ大学",
+    "LoginHead": "ログイン",
+    "login": "ログイン",
+"password": "パスワード",
+"noaccount": "アカウントをお持ちでない場合",
+"register": "登録",
+"log_in": "ログイン"
+
 
 }

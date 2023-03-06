@@ -9,5 +9,12 @@
     "more": "Más",
     "contact": "Contacto",
     "gallery": "Galería",
-    "copyright": "©2023 Universidad Kazimierz el Grande."
+    "copyright": "©2023 Universidad Kazimierz el Grande.",
+    "LoginHead": "INICIAR SESIÓN",
+    "login": "Iniciar sesión",
+"password": "Contraseña",
+"noaccount": "¿No tienes una cuenta?",
+"register": "Registrarse",
+"log_in": "Acceder"
+
 }

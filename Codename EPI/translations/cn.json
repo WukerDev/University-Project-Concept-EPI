@@ -9,5 +9,12 @@
     "more": "更多",
     "contact": "联系我们",
     "gallery": "画廊",
-    "copyright": "©2023 卡日米日维克大学"
+    "copyright": "©2023 卡日米日维克大学",
+    "LoginHead": "登录",
+    "login": "登录",
+"password": "密码",
+"noaccount": "没有账户？",
+"register": "注册",
+"log_in": "登录"
+
 }

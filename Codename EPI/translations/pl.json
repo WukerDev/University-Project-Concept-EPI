@@ -10,6 +10,12 @@
     "more": "Więcej",
     "contact": "Kontakt",
     "gallery": "Galeria",
-    "copyright": "©2023 Uniwersytet Kazimierza Wielkiego"
+    "copyright": "©2023 Uniwersytet Kazimierza Wielkiego",
+    "LoginHead": "ZALOGUJ SIĘ",
+    "login": "Login",
+    "password": "Hasło",
+    "noaccount": "Nie masz konta?",
+    "register": "Zarejestruj się",
+    "log_in": "Zaloguj"
 }
 

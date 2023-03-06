@@ -9,6 +9,13 @@
     "more": "Mehr",
     "contact": "Kontakt",
     "gallery": "Galerie",
-    "copyright": "©2023 Universität Kazimierz der Große. Alle Rechte vorbehalten."
+    "copyright": "©2023 Universität Kazimierz der Große. Alle Rechte vorbehalten.",
+    "LoginHead": "ANMELDEN",
+    "login": "Anmelden",
+"password": "Passwort",
+"noaccount": "Sie haben kein Konto?",
+"register": "Registrieren",
+"log_in": "Einloggen"
+
 
 }

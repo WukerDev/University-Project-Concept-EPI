@@ -9,5 +9,12 @@
     "more": "더보기",
     "contact": "연락처",
     "gallery": "갤러리",   
-    "copyright": "©2023 카지미에르 외토 대학교"
+    "copyright": "©2023 카지미에르 외토 대학교",
+    "LoginHead": "로그인",
+    "login": "로그인",
+"password": "비밀번호",
+"noaccount": "계정이 없으신가요?",
+"register": "회원가입",
+"log_in": "로그인"
+
 }

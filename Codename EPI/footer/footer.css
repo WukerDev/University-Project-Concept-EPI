@@ -14,8 +14,8 @@
         height: 9vh;
         margin-top: auto;
         width: 100%;
-        position: fixed;
-        bottom: 0pt;
+        position: relative;
+        bottom: 0rem;
         
     }
     #footer-social-icon > img{
@@ -50,8 +50,8 @@
             height: 9vh;
             bottom: 0;
             width: 100%;
-            position: fixed;
-            bottom: 0pt;
+            position: relative;
+            bottom: 0rem;
 
         }
         #footer-social-icon > img{

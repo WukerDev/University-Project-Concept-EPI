@@ -1,6 +1,7 @@
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1119px) {
     .login{
         display: flex;
+        transition: 0.5s;
         width: 95vw;
         height: 45vh;
         align-items: center;
@@ -53,6 +54,7 @@
     @media screen and (min-width: 1200px) {
         .login{
             display: flex;
+            transition: 0.5s;
             width: 42vw;
             height: 50vh;
             align-items: center;

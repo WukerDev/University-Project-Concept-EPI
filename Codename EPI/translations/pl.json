@@ -15,7 +15,11 @@
     "login": "Login",
     "password": "Hasło",
     "noaccount": "Nie masz konta?",
-    "register": "Zarejestruj się",
+
+    "registerhead": "Zarejestruj się",
+    "register": "Zarejestruj",
+    
+
     "log_in": "Zaloguj",
     "email": "Adres e-mail",
     "forgot_password": "Reset hasła"

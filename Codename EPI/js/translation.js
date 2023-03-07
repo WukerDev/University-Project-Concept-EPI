@@ -107,13 +107,14 @@ function zaladujDane() {
             $(".translate_noaccount").html("<span>" + dane.noaccount + "</span>");
 
             //register
-            $(".translate_register").html("<span>" + dane.register + "</span>");
-
+            $(".translate_register").html("<p><b>" + dane.registerhead + "</b></p>");
+            //register2
+            $(".translate_register2").html("<b>" + dane.register + "</b>");
             //loginin
             $(".translate_log_in").html("<span><b>" + dane.log_in + "</b></span>");
 
             //email 
-            $(".translate_email").html("<span>" + dane.email + "</span>");
+            $(".translate_email").html('<input type="text" style="width: 100%;" placeholder="' + dane.email + '" required>');
 
             //forgot password
             $(".translate_forgotpass").html("<span>" + dane.forgot_password + "</span>");

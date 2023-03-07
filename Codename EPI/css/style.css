@@ -27,11 +27,13 @@ body{
     --secondary-color: #eeeeee;
     --tertiary-color: #192b85;
     --text-color: #000000;
+    --article-bg-color: #CCC;
 }
 .dark-theme{
     --primary-color: #1c1d1f;
     --secondary-color: #252b30;
     --text-color: #ffffff;
+    --article-bg-color: #222;
 }
 
 
@@ -314,5 +316,5 @@ span.highlight{ /* POGRUBIENIE I POWIĘKSZENIE TEKSTU */
     padding-block: 5rem;
 }
 #articles .article:nth-child(odd){
-    background-color: #DDD;
+    background-color: var(--article-bg-color);
 }

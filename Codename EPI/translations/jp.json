@@ -15,7 +15,10 @@
 "password": "パスワード",
 "noaccount": "アカウントをお持ちでない場合",
 "register": "登録",
-"log_in": "ログイン"
+"log_in": "ログイン",
+"email": "メールアドレス",
+"forgot_password": "パスワードをお忘れですか？"
+
 
 
 }

@@ -28,7 +28,7 @@
         justify-content: center;
         gap: 5px;
         width: 80vw;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
       }
       #LoginButton:hover {
         background-image: linear-gradient(#2d45be, #16257a);
@@ -81,7 +81,7 @@
             justify-content: center;
             gap: 5px;
             width: 20vw;
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
           }
           #LoginButton:hover {
             background-image: linear-gradient(#2d45be, #16257a);
@@ -122,13 +122,22 @@
         margin-top: 2vh;
         gap: 15vw;
       }
+      #LoginAskForgot{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        font-size: 2vh;
+        margin-bottom: 2vh;
+        gap: 15vw;
+      }
       .LoginData {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         font-size: 2vh;
-        width: 60%;      }
+        width: 100%;      }
       
       .LoginData input[type="text"], 
       .LoginData input[type="password"] {

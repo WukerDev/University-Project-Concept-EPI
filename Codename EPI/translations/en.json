@@ -15,7 +15,10 @@
 "password": "Password",
 "noaccount": "Don't have an account?",
 "register": "Register",
-"log_in": "Log in"
+"log_in": "Log in",
+"email": "Email Address",
+"forgot_password": "Forgot Password"
+
 
 }
 

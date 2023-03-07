@@ -17,6 +17,7 @@
     "noaccount": "Nie masz konta?",
     "register": "Zarejestruj się",
     "log_in": "Zaloguj",
-    "email": "Adres e-mail"
+    "email": "Adres e-mail",
+    "forgot_password": "Reset hasła"
 }
 

@@ -15,6 +15,9 @@
 "password": "密码",
 "noaccount": "没有账户？",
 "register": "注册",
-"log_in": "登录"
+"log_in": "登录",
+"email": "电子邮件地址",
+"forgot_password": "忘记密码"
+
 
 }

@@ -15,6 +15,9 @@
 "password": "비밀번호",
 "noaccount": "계정이 없으신가요?",
 "register": "회원가입",
-"log_in": "로그인"
+"log_in": "로그인",
+"email": "이메일 주소",
+"forgot_password": "비밀번호를 잊으셨나요?"
+
 
 }

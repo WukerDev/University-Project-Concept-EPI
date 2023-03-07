@@ -15,6 +15,9 @@
 "password": "Mot de passe",
 "noaccount": "Pas de compte?",
 "register": "S'inscrire",
-"log_in": "Se connecter"
+"log_in": "Se connecter",
+"email": "Indirizzo email",
+"forgot_password": "Hai dimenticato la password"
+
 
 }

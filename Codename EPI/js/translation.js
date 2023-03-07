@@ -93,12 +93,10 @@ function zaladujDane() {
             $(".translate_loginhead").html("<span><b><p>"+ dane.LoginHead + "</p></b></span>");
 
             //login
-            $(".translate_login").html("<span>" + dane.login + "</span>").click(function() {
-                window.location.href = "login.html";
-            });
+            $(".translate_login").html('<input type="text" style="width: 100%;" placeholder="' + dane.login + '" required>');
 
             //password
-            $(".translate_password").html("<span>" + dane.password + "</span>");
+            $(".translate_password").html('<input type="password" style="width: 100%" placeholder="' + dane.password + '" required>');
             
             //noacc
             $(".translate_noaccount").html("<span>" + dane.noaccount + "</span>");
@@ -111,6 +109,9 @@ function zaladujDane() {
 
             //email 
             $(".translate_email").html("<span>" + dane.email + "</span>");
+
+            //forgot password
+            $(".translate_forgotpass").html("<span>" + dane.forgot_password + "</span>");
             
         }
     };

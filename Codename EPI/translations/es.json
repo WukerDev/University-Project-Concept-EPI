@@ -15,6 +15,9 @@
 "password": "Contraseña",
 "noaccount": "¿No tienes una cuenta?",
 "register": "Registrarse",
-"log_in": "Acceder"
+"log_in": "Acceder",
+"email": "Correo electrónico",
+"forgot_password": "Olvidé mi contraseña"
+
 
 }

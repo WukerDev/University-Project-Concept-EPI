@@ -8,21 +8,17 @@ body{
     color: var(--text-color);
     font-family: 'Didact Gothic', sans-serif;
     background-color: var(--secondary-color);
-    margin-top: 8rem;
+    margin-top: 5rem;
     min-height: 100vh;
     overflow-x: hidden;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 }
 
 
 #user-icon{
     height: 25px;
     width: 25px;
-}
-
-body > footer {
-    position: fixed;
-    bottom: 0;
-    
 }
 
 /* DARK THEME v0.1 */
@@ -314,4 +310,8 @@ span.highlight{ /* POGRUBIENIE I POWIĘKSZENIE TEKSTU */
 
 #articles .article{
     padding-inline: 2rem;
+    padding-block: 5rem;
+}
+#articles .article:nth-child(odd){
+    background-color: #DDD;
 }

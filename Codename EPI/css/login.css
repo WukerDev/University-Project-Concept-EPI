@@ -110,7 +110,8 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        height: 80%;
+        margin-block: 5rem;
+        /* height: 80%; */
     }
     #LoginAsk{
         display: flex;

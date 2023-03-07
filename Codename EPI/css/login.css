@@ -53,7 +53,7 @@
     }
     }
     @media screen and (min-width: 1200px) {
-        .login{
+      .login{
             display: flex;
             transition: 0.5s;
             width: 50%;
@@ -111,6 +111,7 @@
         align-items: center;
         flex-direction: column;
         margin-block: 5rem;
+        margin-top: 20vh;
         /* height: 80%; */
     }
     #LoginAsk{

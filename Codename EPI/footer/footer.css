@@ -31,7 +31,7 @@
         justify-content: center;
         align-items: center;
         font-size: 1.5vh;
-        color: var(primary-color);
+        color: white;
     }
     
     }
@@ -67,6 +67,6 @@
             justify-content: center;
             align-items: center;
             font-size: 1.5vh;
-            color: var(primary-color);
+            color: white;
         }
     }

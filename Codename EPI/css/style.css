@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ruda:wght@700&display=swap');
-html, body {height:100%;}
+/* html, body {height:100%;} */
 
 body{
     margin: 0px;
@@ -28,12 +28,14 @@ body{
     --tertiary-color: #192b85;
     --text-color: #000000;
     --article-bg-color: #CCC;
+    --login-icon-hover: #ddd;
 }
 .dark-theme{
-    --primary-color: #1c1d1f;
-    --secondary-color: #252b30;
+    --primary-color: #202020;
+    --secondary-color: #292a2b;
     --text-color: #ffffff;
     --article-bg-color: #222;
+    --login-icon-hover: #333;
 }
 
 
@@ -85,7 +87,7 @@ body{
     color: var(--text-color);
     background-color: var(--primary-color);
     font-size: 18px;
-    border-bottom: 1px solid #eee;
+    /* border-bottom: 1px solid #eee; */
     box-shadow: rgba(0,0,0,0.2) 2px 5px 10px;
     display: flex;
     align-items: center;
@@ -102,6 +104,14 @@ prawo-p{ /* USTAWIANIE ELEMENTÓW PO PRAWO W NAVBARZE */
     display: flex;
     justify-content: flex-end;
     margin-left: auto;
+}
+.login-card{
+    /* transition: 0.5s; */
+    padding: 0px 20px;
+}
+.login-card:hover{
+    background-color: var(--login-icon-hover);
+    cursor: pointer;
 }
 
 

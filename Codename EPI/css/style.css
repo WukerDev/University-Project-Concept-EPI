@@ -8,13 +8,12 @@ body{
     color: var(--text-color);
     font-family: 'Didact Gothic', sans-serif;
     background-color: var(--secondary-color);
-    margin-top: 5rem;
+    /* margin-top: 5rem; */
     min-height: 100vh;
     overflow-x: hidden;
     display: grid;
     grid-template-rows: auto 1fr auto;
 }
-
 
 #user-icon{
     height: 25px;
@@ -306,6 +305,7 @@ span.highlight{ /* POGRUBIENIE I POWIĘKSZENIE TEKSTU */
     text-align: center;
     margin-inline: auto;
     font-size: 25px;
+    margin-top: 7rem;
 }
 
 #articles .article{

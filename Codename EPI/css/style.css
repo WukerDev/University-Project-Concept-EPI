@@ -19,11 +19,7 @@ body{
     width: 25px;
 }
 
-body > footer {
-    position: fixed;
-    bottom: 0;
-    
-}
+
 
 /* DARK THEME v0.1 */
 :root{

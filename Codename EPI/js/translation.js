@@ -109,6 +109,8 @@ function zaladujDane() {
             //loginin
             $(".translate_log_in").html("<span><b>" + dane.log_in + "</b></span>");
 
+            //email 
+            $(".translate_email").html("<span>" + dane.email + "</span>");
             
         }
     };

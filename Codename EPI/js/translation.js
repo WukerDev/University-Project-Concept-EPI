@@ -83,9 +83,12 @@ function zaladujDane() {
                 window.location.href = "contact.html";
             });
 
-            //mobile login icon
+            //custom click functions
             $('.login-card').click(function() {
                 window.location.href = "login.html";
+            });
+            $('.logo-ukw').click(function() {
+                window.location.href = "home.html";
             });
 
             //copyright

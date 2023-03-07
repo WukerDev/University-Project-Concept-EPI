@@ -66,7 +66,7 @@ function zaladujDane() {
             $(".translate_home").html('<span><b>' + dane.home + "</b></span>").click(function() {
                 window.location.href = "home.html";
             });
-
+            document.title = dane.page_title;
             //galeria
             $(".translate_gallery").html("<span><b>"+ dane.gallery + "</b></span>").click(function() {
                 window.location.href = "gallery.html";

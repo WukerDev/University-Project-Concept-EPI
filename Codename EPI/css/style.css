@@ -8,7 +8,7 @@ body{
     color: var(--text-color);
     font-family: 'Didact Gothic', sans-serif;
     background-color: var(--secondary-color);
-    margin-top: 75px;
+    margin-top: 8rem;
     min-height: 100vh;
     overflow-x: hidden;
 }
@@ -305,6 +305,12 @@ span.highlight{ /* POGRUBIENIE I POWIĘKSZENIE TEKSTU */
     box-shadow: rgba(0,0,0,0.2) 2px 5px 10px;   
 }
 /* ARTICLES SECTION */
+
+#title{
+    text-align: center;
+    margin-inline: auto;
+    font-size: 25px;
+}
 
 #articles .article{
     padding-inline: 2rem;

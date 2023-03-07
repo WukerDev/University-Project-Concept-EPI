@@ -83,6 +83,11 @@ function zaladujDane() {
                 window.location.href = "contact.html";
             });
 
+            //mobile login icon
+            $('.login-card').click(function() {
+                window.location.href = "login.html";
+            });
+
             //copyright
             $(".translate_copyright").html("<span><b>"+ dane.copyright + "</b></span>");
 

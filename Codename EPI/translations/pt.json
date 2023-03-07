@@ -17,7 +17,10 @@
 "register": "Registrar",
 "log_in": "Entrar",
 "email": "Endereço de e-mail",
-"forgot_password": "Esqueceu a senha"
+"forgot_password": "Esqueceu a senha",
+"registernow": "Registre-se agora",
+"registerhead": "REGISTRO",
+"allrd": "Já tem uma conta?"
 
 
 }

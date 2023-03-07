@@ -17,7 +17,10 @@
 "register": "रजिस्टर करें",
 "log_in": "लॉग इन करें",
 "email": "ईमेल पता",
-"forgot_password": "पासवर्ड भूल गए"
+"forgot_password": "पासवर्ड भूल गए",
+"registernow": "अभी रजिस्टर करें",
+"registerhead": "रजिस्टर करें",
+"allrd": "पहले से ही खाता है?"
 
 
 }

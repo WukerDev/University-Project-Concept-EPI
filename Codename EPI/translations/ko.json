@@ -17,7 +17,10 @@
 "register": "회원가입",
 "log_in": "로그인",
 "email": "이메일 주소",
-"forgot_password": "비밀번호를 잊으셨나요?"
+"forgot_password": "비밀번호를 잊으셨나요?",
+"registernow": "지금 가입하세요",
+"registerhead": "회원 가입",
+"allrd": "이미 계정이 있으신가요?"
 
 
 }

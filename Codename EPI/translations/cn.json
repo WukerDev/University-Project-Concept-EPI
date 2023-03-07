@@ -17,7 +17,10 @@
 "register": "注册",
 "log_in": "登录",
 "email": "电子邮件地址",
-"forgot_password": "忘记密码"
+"forgot_password": "忘记密码",
+"registernow": "立即注册",
+"registerhead": "注册",
+"allrd": "已有账号？"
 
 
 }

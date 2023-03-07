@@ -96,7 +96,7 @@ function zaladujDane() {
 
             //login title
             $(".translate_loginhead").html("<span><b><p>"+ dane.LoginHead + "</p></b></span>");
-
+            $(".translate_registerhead").html("<span><b><p>"+ dane.registerhead + "</p></b></span>");
             //login
             $(".translate_login").html('<input type="text" style="width: 100%;" placeholder="' + dane.login + '" required>');
 
@@ -118,6 +118,12 @@ function zaladujDane() {
 
             //forgot password
             $(".translate_forgotpass").html("<span>" + dane.forgot_password + "</span>");
+
+            //register now
+            $(".translate_registernow").html('<a href="../pages/register.html">' + dane.registernow + '</a>');
+
+            // translate_allracc
+            $(".translate_allracc").html(dane.allrd + '‎ ‎ ‎ ‎ ‎<a href="../pages/login.html">' + dane.log_in + '</a>');
             
         }
     };

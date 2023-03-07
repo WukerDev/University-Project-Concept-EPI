@@ -15,6 +15,9 @@
 Aby dowiedzieć się szczegółowych informacji na temat projektu przejdź do [dokumentacji](http://sekurwaposzukaj.pl/).
 
 
+##Link do planu projektu
+https://github.com/users/WukerDev/projects/2
+
 ## FAQ
 
 #### Pytanie 1

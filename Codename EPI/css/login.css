@@ -3,7 +3,7 @@
         display: flex;
         transition: 0.5s;
         width: 95vw;
-        height: 45vh;
+        height: auto;
         align-items: center;
         justify-content: space-between;
         background-color: var(--primary-color);
@@ -17,7 +17,7 @@
         background-image: linear-gradient(#293b97, #101b57);
         color: white;
         border: none;
-        border-radius: 1  5px;
+        border-radius: 15px;
         padding: 10px 20px;
         font-size: 2vh;
         cursor: pointer;
@@ -48,6 +48,7 @@
         border-radius: 15px;
         padding: 0 5vw;
         text-shadow: 1px 1px #000000;
+        margin-bottom: 2vh;
         
     }
     }
@@ -55,8 +56,8 @@
         .login{
             display: flex;
             transition: 0.5s;
-            width: 42vw;
-            height: 50vh;
+            width: 50%;
+            height: auto;
             align-items: center;
             justify-content: space-between;
             background-color: var(--primary-color);
@@ -109,7 +110,7 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        height: 60%;
+        height: 80%;
     }
     #LoginAsk{
         display: flex;
@@ -126,7 +127,7 @@
         align-items: center;
         justify-content: center;
         font-size: 2vh;
-      }
+        width: 60%;      }
       
       .LoginData input[type="text"], 
       .LoginData input[type="password"] {

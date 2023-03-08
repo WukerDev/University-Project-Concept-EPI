@@ -120,7 +120,7 @@ function zaladujDane() {
             $(".translate_email").html('<input type="text" style="width: 100%;" placeholder="' + dane.email + '" required>');
 
             //forgot password
-            $(".translate_forgotpass").html("<span>" + dane.forgot_password + "</span>");
+            $(".translate_forgotpass").html('<a href="../pages/passreset.html"><span>' + dane.forgot_password + "</span></a>");
 
             //register now
             $(".translate_registernow").html('<a href="../pages/register.html">' + dane.registernow + '</a>');

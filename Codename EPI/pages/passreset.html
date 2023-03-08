@@ -1,0 +1,115 @@
+<!--make me a website please--> 
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- META -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <meta name="apple-mobile-web-app-title" content="UKW Koło Naukowe">
+    <meta name="application-name" content="UKW Koło Naukowe">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/karty.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/hover-min.css">
+    <link rel="stylesheet" href="../footer/footer.css">
+    <link rel="stylesheet" href="../css/scroll.css">
+    <link rel="stylesheet" href="../css/dropdown.css">
+    <link rel="stylesheet" href="../css/login.css">
+
+
+    
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@500&display=swap" rel="stylesheet"> 
+
+    <!-- SCRIPTS -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+        <script src="../js/mobile-navbar.js"></script>
+
+    <script src="https://kit.fontawesome.com/dea6e96ac2.js" crossorigin="anonymous"></script>
+    <script src="../js/translation.js"></script>
+    <script src="../js/test.js"></script>
+    <script src="../js/darkmodeFlip.js"></script>
+    <script src="../js/loader.js"></script>
+    <script src="../js/mobile-navbar.js"></script>
+    <!-- <script src="../js/detectMobile.js"></script> -->
+
+    <!-- HEADER AND FOOTER -->
+    <script> 
+        $(function(){
+            $("#footer").load("../footer/footer.html"); 
+        });
+    </script> 
+    <!-- <div id="footer"></div> -->
+
+    <!-- ICONS -->
+    <link rel="apple-touch-icon" sizes="76x76" href="https://drive.google.com/uc?id=14GIp3a3IxieImciPy8vdD6pR5dJGjf6S">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://drive.google.com/uc?id=1yBZoKf1PtZVUM58aiPz68ZLX8SjgJwx3">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://drive.google.com/uc?id=1c5efSqg4HNZyt_iuhMACfj4766mj4WmH">
+    <link rel="mask-icon" href="https://drive.google.com/uc?id=1tjG_nrJa5sREyI_AfyEDwuVgRTAfP7hB" color="#5bbad5">
+    <link rel="shortcut icon" href="https://drive.google.com/uc?id=1xXGXPhMpxz3ewEI7gC2RdvmNSTpKfHfB">
+
+</head>
+<body class="LoginBody">
+    <div id="loader">
+        <h2><i class="far fa-spinner-third"></i></h2>
+    </div>
+
+<!-- MOBILE NAV -->
+    <div class="mobile-navbar">
+        <ul class="mobile-navbar-inner">
+            <li class="mobile-navbar-inner-item"><span><i class="fas fa-moon"></i></span></li>
+            <li class="mobile-navbar-inner-item hvr-underline-from-center"><span>Home</span></li>
+            <li class="mobile-navbar-inner-item hvr-underline-from-center"><span>Gallery</span></li>
+            <li class="mobile-navbar-inner-item hvr-underline-from-center"><span>Contact</span></li>
+        </ul>
+        <div class="mobile-navbar-overlay"></div>
+    </div>
+
+<!-- SCROLL TO TOP BUTTON -->
+    <div class="scroll-top-container">
+        <button id="scroll-top"><i class="fas fa-level-up"></i></button>
+    </div>
+
+<!-- SITE -->
+    <div class="main" id="login-main">
+        <ul class="navbar">
+            <li class="notdropdown"><span><img src="https://www.ukw.edu.pl/img/ukw.svg" alt="Uniwersytet Kazimierza Wielkiego w Bydgoszczy" class="hvr-grow hvr-float"></span></li>
+            <prawo-p>
+                
+                <li id="ikona" class="hvr-underline-from-left notdropdown"><span><i class="fas fa-moon"></i></span></li>
+                <li class="hvr-underline-from-center notdropdown translate_home"><span class="speen">⌛</span></li>
+                <li class="hvr-underline-from-center notdropdown translate_gallery"><span class="speen">⌛</span></li>
+                <li class="hvr-underline-from-right notdropdown translate_contact"><span class="speen">⌛</span></li>
+                <li id="ikona" class="hvr-underline-from-left notdropdown"><a href="../pages/login.html"><img src="../assets/user/user.svg" id="user-icon"></a></span></li>
+                <div class="dropdown">
+                    <li class="translate_lang"><span class="speen">⌛</span></li>
+                    <div class="dropdown-menu">
+                    </div>
+                </div>
+            </prawo-p>
+            <borgier-mobile>
+                <li class="mobile-bars"><i class="fas fa-bars"></i></li>
+            </borgier-mobile>
+        </ul>
+    <div class="login">
+            <div id="LoginHead" class="translate_resetpass"><p><b>Reset hasła</b></p></div>
+            <div class="LoginData"><div class="translate_email" style="width: 60%;"><input type="text" placeholder="email" ></div></div>
+            <br>
+            <button id="LoginButton" class="translate_resetnow">Resetuj</button>
+        </div>
+    </div>
+</body>
+
+
+
+<!-- FOOTER -->
+<footer id="footer" style="position: fixed; bottom: 0;"></footer>
+
+</html> 

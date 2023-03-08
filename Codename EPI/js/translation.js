@@ -114,7 +114,7 @@ function zaladujDane() {
             //register2
             $(".translate_register2").html("<b>" + dane.register + "</b>");
             //loginin
-            $(".translate_log_in").html("<span><b>" + dane.log_in + "</b></span>");
+            $(".translate_log_in").html('<span><b>' + dane.log_in + "</b></span>");
 
             //email 
             $(".translate_email").html('<input type="text" style="width: 100%;" placeholder="' + dane.email + '" required>');

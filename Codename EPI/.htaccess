@@ -1,1 +1,6 @@
 Header set Access-Control-Allow-Origin 'origin-list'
+Header set Access-Control-Allow-Headers '*'
+Header set Access-Control-Allow-Headers "GET, POST, PUT, DELETE, OPTIONS"
+Header set Status "200 OK"
+Header set Vary "Accept"
+Header set Content-Type "application/octet-stream"

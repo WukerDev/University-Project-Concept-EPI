@@ -1,18 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ruda:wght@700&display=swap');
 /* html, body {height:100%;} */
+
+@font-face {
+    font-family: 'TheEpicFont';
+    src: url(DidactGothic-Regular.ttf);
+}
 
 body{
     margin: 0px;
     padding: 0px;
     color: var(--text-color);
-    font-family: 'Didact Gothic', sans-serif;
     background-color: var(--secondary-color);
     /* margin-top: 5rem; */
     min-height: 100vh;
     overflow-x: hidden;
     display: grid;
     grid-template-rows: auto 1fr auto;
+    font-family: 'TheEpicFont', sans-serif;
 }
 
 #user-icon{

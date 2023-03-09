@@ -38,14 +38,23 @@
     <script src="../js/test.js"></script>
     <script src="../js/darkmodeFlip.js"></script>
     <script src="../js/loader.js"></script>
-    <script src="../js/mobile-navbar.js"></script>
+    <script src="../js/nav.js"></script>
     <!-- <script src="../js/detectMobile.js"></script> -->
 
     <!-- HEADER AND FOOTER -->
     <script> 
-        $(function(){
-            $("#footer").load("../footer/footer.html");
-        });
+        $(document).ready(function() {
+            function deferredLoad(target, url) {
+                return $.Deferred(function(deferred) {
+                    $(target).load(url, function() {
+                        deferred.resolve();
+                    });
+                }).promise();
+        }
+        var loadPromises = [];
+        loadPromises.push(deferredLoad("#footer", "../footer/footer.html"));
+        // loadPromises.push(deferredLoad("#loadNavbar", "../navbar/navbar.html"));
+    });
     </script> 
     <!-- <div id="footer"></div> -->
 
@@ -60,18 +69,7 @@
 <body>
     <div id="loader">
         <h2><i class="far fa-spinner-third"></i></h2>
-    </div>
-
-<!-- MOBILE NAV -->
-    <div class="mobile-navbar">
-        <ul class="mobile-navbar-inner">
-            <li class="mobile-navbar-inner-item"><span><i class="fas fa-moon"></i></span></li>
-            <li class="mobile-navbar-inner-item hvr-underline-from-center translate_home"><span>⌛</span></li>
-            <li class="mobile-navbar-inner-item hvr-underline-from-center translate_gallery"><span>⌛</span></li>
-            <li class="mobile-navbar-inner-item hvr-underline-from-center translate_contact"><span>⌛</span></li>
-        </ul>
-        <div class="mobile-navbar-overlay"></div>
-    </div>
+    </div
 
 <!-- SCROLL TO TOP BUTTON -->
     <div isvisible="false" class="scroll-top-container">
@@ -80,25 +78,56 @@
 
 <!-- SITE -->
     <div class="main">
-        <ul class="navbar">
-            <li class="notdropdown"><span><img src="https://www.ukw.edu.pl/img/ukw.svg" alt="Uniwersytet Kazimierza Wielkiego w Bydgoszczy" class="hvr-grow hvr-float"></span></li>
-            <prawo-p>
-                
-                <li id="ikona" class="hvr-underline-from-left notdropdown"><span><i class="fas fa-moon"></i></span></li>
-                <li class="hvr-underline-from-center notdropdown translate_home"><span class="speen">⌛</span></li>
-                <li class="hvr-underline-from-center notdropdown translate_gallery"><span class="speen">⌛</span></li>
-                <li class="hvr-underline-from-right notdropdown translate_contact"><span class="speen">⌛</span></li>
-                <li id="ikona" class="hvr-underline-from-left notdropdown"><a href="../pages/login.html"><img src="../assets/user/user.svg" id="user-icon"></a></span></li>
-                <div class="dropdown">
-                    <li class="translate_lang"><span class="speen">⌛</span></li>
-                    <div class="dropdown-menu">
-                    </div>
-                </div>
-            </prawo-p>
-            <borgier-mobile>
-                <li class="mobile-bars"><i class="fas fa-bars"></i></li>
-            </borgier-mobile>
+
+        <p class="too-small">
+            Your screen is too small to display this website properly. Please use a bigger screen.
+        </p>
+        <header class="primary-header flex">
+        <div>
+        <img src="https://www.ukw.edu.pl/img/ukw.svg" class="logo">
+        </div>
+        
+        <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false"><span class="sr-only">Menu</span></button>
+        
+        <nav>
+        <ul id="primary-navigation" data-visible="false" class="primary-navigation flex">
+        <li class="active">
+            <a class="translate_home">
+                CheckLoad
+            </a>
+        </li>
+        <li>
+            <a class="translate_gallery">
+                Gallery
+            </a>
+        </li>
+        </li>
+        <li>
+            <a class="login-card">
+                <i class="fas fa-user"></i> Login
+            </a>
+        </li>
+        <li>
+            <a class="translate_contact">
+                Contact
+            </a>
+        </li>
+        <li id="language-pick">
+            <a class="translate_lang">
+                Language
+            </a>
+        </li>
         </ul>
+        </nav>
+        </header>
+        
+        <section data-visible="false" id="language-picker">
+        <div class="background-hider">
+        <div class="dropdown-menu">
+        </div>
+        </div>
+        </section>
+
 <section id="title">
     <h1>Galeria</h1>
 </section>

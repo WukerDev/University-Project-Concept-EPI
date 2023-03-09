@@ -31,21 +31,30 @@
 
     <!-- SCRIPTS -->
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-        <script src="../js/mobile-navbar.js"></script>
-
+    <script src="../js/mobile-navbar.js"></script>
     <script src="https://kit.fontawesome.com/dea6e96ac2.js" crossorigin="anonymous"></script>
     <script src="../js/translation.js"></script>
     <script src="../js/test.js"></script>
     <script src="../js/darkmodeFlip.js"></script>
     <script src="../js/loader.js"></script>
-    <script src="../js/mobile-navbar.js"></script>
+    <script src="../js/nav.js"></script>
+
     <!-- <script src="../js/detectMobile.js"></script> -->
 
     <!-- HEADER AND FOOTER -->
     <script> 
-        $(function(){
-            $("#footer").load("../footer/footer.html");
-        });
+        $(document).ready(function() {
+            function deferredLoad(target, url) {
+                return $.Deferred(function(deferred) {
+                    $(target).load(url, function() {
+                        deferred.resolve();
+                    });
+                }).promise();
+        }
+        var loadPromises = [];
+        loadPromises.push(deferredLoad("#footer", "../footer/footer.html"));
+        // loadPromises.push(deferredLoad("#loadNavbar", "../navbar/navbar.html"));
+    });
     </script> 
     <!-- <div id="footer"></div> -->
 
@@ -62,18 +71,6 @@
         <h2><i class="far fa-spinner-third"></i></h2>
     </div>
 
-<!-- MOBILE NAV -->
-    <div class="mobile-navbar">
-        <ul class="mobile-navbar-inner">
-            <li class="mobile-navbar-inner-item"><span><i class="fas fa-moon"></i></span></li>
-            <li class="mobile-navbar-inner-item hvr-underline-from-center translate_home"><span>⌛</span></li>
-            <li class="mobile-navbar-inner-item hvr-underline-from-center translate_gallery"><span>⌛</span></li>
-            <li class="mobile-navbar-inner-item hvr-underline-from-center translate_contact"><span>⌛</span></li>
-            <li class="mobile-navbar-inner-item login-card"><i class="fas fa-user"></i></li>
-        </ul>
-        <div class="mobile-navbar-overlay"></div>
-    </div>
-
 <!-- SCROLL TO TOP BUTTON -->
     <div isvisible="false" class="scroll-top-container">
         <button id="scroll-top"><i class="fas fa-level-up"></i></button>
@@ -81,26 +78,55 @@
 
 <!-- SITE -->
     <div class="main">
-        <ul class="navbar">
-            <li class="logo-ukw notdropdown"><span><img src="https://www.ukw.edu.pl/img/ukw.svg" alt="Uniwersytet Kazimierza Wielkiego w Bydgoszczy" class="hvr-grow hvr-float"></span></li>
-            <prawo-p>
-                
-                <li id="ikona" class="hvr-underline-from-left notdropdown"><span><i class="fas fa-moon"></i></span></li>
-                <li class="hvr-underline-from-center notdropdown translate_home"><span class="speen">⌛</span></li>
-                <li class="hvr-underline-from-center notdropdown translate_gallery"><span class="speen">⌛</span></li>
-                <li class="hvr-underline-from-right notdropdown translate_contact"><span class="speen">⌛</span></li>
-            <li class="notdropdown login-card"><i class="fas fa-user"></i></li>
-            <li id="ikona" class="hvr-underline-from-left notdropdown"></span></li>
-                <div class="dropdown">
-                    <li class="translate_lang"><span class="speen">⌛</span></li>
-                    <div class="dropdown-menu">
-                    </div>
-                </div>
-            </prawo-p>
-            <borgier-mobile>
-                <li class="mobile-bars"><i class="fas fa-bars"></i></li>
-            </borgier-mobile>
+        <p class="too-small">
+            Your screen is too small to display this website properly. Please use a bigger screen.
+        </p>
+        <header class="primary-header flex">
+        <div>
+        <img src="https://www.ukw.edu.pl/img/ukw.svg" class="logo">
+        </div>
+        
+        <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false"><span class="sr-only">Menu</span></button>
+        
+        <nav>
+        <ul id="primary-navigation" data-visible="false" class="primary-navigation flex">
+        <li class="active">
+            <a class="translate_home">
+                CheckLoad
+            </a>
+        </li>
+        <li>
+            <a class="translate_gallery">
+                Gallery
+            </a>
+        </li>
+        </li>
+        <li>
+            <a class="login-card">
+                <i class="fas fa-user"></i> Login
+            </a>
+        </li>
+        <li>
+            <a class="translate_contact">
+                Contact
+            </a>
+        </li>
+        <li id="language-pick">
+            <a class="translate_lang">
+                Language
+            </a>
+        </li>
         </ul>
+        </nav>
+        </header>
+        
+        <section data-visible="false" id="language-picker">
+        <div class="background-hider">
+        <div class="dropdown-menu">
+        </div>
+        </div>
+        </section>
+
 <section id="title">
     <h1>Articles</h1>
 </section>
@@ -130,32 +156,6 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis libero tortor. Fusce eu magna arcu. Phasellus ac pellentesque ante. Integer eu auctor massa. Nam nec mi vel sem laoreet imperdiet a suscipit sem. Nulla sed tincidunt risus. Nam molestie eu dui varius vulputate. Vivamus commodo mi id nunc sodales malesuada.</p>
     </div>
 </section>
-        <!-- <div class="content">
-            <article contentEditable></article>
-            <p><span class="highlight">Lorem</span> ipsum dolor sit amet, consectetur adipiscing elit. Duis quis libero tortor. Fusce eu magna arcu. Phasellus ac pellentesque ante. Integer eu auctor massa. Nam nec mi vel sem laoreet imperdiet a suscipit sem. Nulla sed tincidunt risus. Nam molestie eu dui varius vulputate. Vivamus commodo mi id nunc sodales malesuada. Fusce nec neque eget erat placerat pretium. Donec tincidunt tellus a libero mollis, at mattis turpis commodo. Donec non odio dapibus, aliquam odio quis, euismod orci.</p>
-            <img class="galera" src="https://picsum.photos/800/300"> 
-            <p>Uniwersytet Kazimierza Wielkiego w Bydgoszczy to jedna z najważniejszych uczelni w regionie kujawsko-pomorskim. Założony w 1969 roku, przez wiele lat pełnił rolę filii Uniwersytetu Mikołaja Kopernika w Toruniu, a od 2005 roku funkcjonuje jako samodzielna uczelnia. W swojej historii Uczelnia przeszła wiele zmian, ale zawsze pozostawała jednym z ważniejszych ośrodków naukowych w Polsce.
-
-                Uniwersytet Kazimierza Wielkiego oferuje szeroki wybór kierunków studiów, zarówno w trybie stacjonarnym, jak i niestacjonarnym. Wśród kierunków znajdują się m.in. nauki humanistyczne, prawo, ekonomia, nauki społeczne, nauki o zdrowiu, nauki przyrodnicze oraz matematyczno-fizyczne. Uczelnia oferuje także wiele programów doktoranckich oraz podyplomowych.
-                
-                Uczelnia zatrudnia doświadczoną kadrę naukową, składającą się z wybitnych specjalistów w swoich dziedzinach. Współpracują oni z uczelniami i instytucjami naukowymi na całym świecie oraz biorą udział w licznych projektach badawczych.
-                
-                Uniwersytet Kazimierza Wielkiego posiada bogatą infrastrukturę naukową, w skład której wchodzą m.in. laboratoria badawcze, biblioteka, sale wykładowe, aula oraz nowoczesne obiekty sportowe. Uczelnia jest także wyposażona w nowoczesne zaplecze IT, co umożliwia studentom korzystanie z najnowocześniejszych narzędzi naukowych.
-                
-                Uniwersytet Kazimierza Wielkiego w Bydgoszczy to nie tylko miejsce kształcenia, ale także liczne organizacje studenckie oraz kluby naukowe. Dzięki temu studenci mają możliwość rozwijania swoich zainteresowań oraz nawiązywania cennych kontaktów, co pozwala im na zdobycie cennego doświadczenia i wiedzy.
-                
-                Podsumowując, Uniwersytet Kazimierza Wielkiego w Bydgoszczy to czołowa uczelnia w regionie, oferująca szeroki wybór kierunków studiów oraz bogatą infrastrukturę naukową. Uczelnia jest znana z wysokiego poziomu nauczania oraz doskonałej kadry naukowej, co przekłada się na sukcesy studentów i absolwentów.</p>
-        </div>
-             <div>
-             NEWS 
-            <social-media-embeded>
-                    <div class="news">
-                        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v16.0" nonce="t7r1LifC"></script>
-                        <div class="fb-page" data-href="https://www.facebook.com/ukwbydgoszcz/"  data-tabs="timeline" data-width="500" data-height="600" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/ukwbydgoszcz/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/ukwbydgoszcz/">Uniwersytet Kazimierza Wielkiego w Bydgoszczy</a></blockquote></div>
-                        <iframe class="ig-page" src="https://www.instagram.com/ukwbydgoszcz/embed" width="500" height="600" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
-                        <a class="twitter-timeline" data-width="500" data-height="600" data-theme="light" href="https://twitter.com/UKWBydgoszcz?ref_src=twsrc%5Etfw"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>        
-                    </social-media-embeded>
-            </div> -->
     </div>
     <!-- FOOTER -->
     <footer id="footer"></footer>

@@ -36,14 +36,23 @@
         <script src="../js/test.js"></script>
         <script src="../js/darkmodeFlip.js"></script>
         <script src="../js/loader.js"></script>
-        <script src="../js/mobile-navbar.js"></script>
+        <script src="../js/nav.js"></script>
         <!-- <script src="../js/detectMobile.js"></script> -->
     
         <!-- HEADER AND FOOTER -->
         <script> 
-            $(function(){
-                $("#footer").load("../footer/footer.html"); 
-            });
+            $(document).ready(function() {
+                function deferredLoad(target, url) {
+                    return $.Deferred(function(deferred) {
+                        $(target).load(url, function() {
+                            deferred.resolve();
+                        });
+                    }).promise();
+            }
+            var loadPromises = [];
+            loadPromises.push(deferredLoad("#footer", "../footer/footer.html"));
+            // loadPromises.push(deferredLoad("#loadNavbar", "../navbar/navbar.html"));
+        });
         </script> 
         <!-- <div id="footer"></div> -->
     
@@ -62,20 +71,58 @@
         <button id="scroll-top"><i class="fas fa-level-up"></i></button>
     </div>
     <div class="main">
-        <ul class="navbar">
-            <li class="notdropdown"><span><img src="https://www.ukw.edu.pl/img/ukw.svg" alt="Uniwersytet Kazimierza Wielkiego w Bydgoszczy" class="hvr-grow hvr-float"></span></li>
-            <prawo-p>
-                <li id="ikona" class="hvr-underline-from-left notdropdown"><span><i class="fas fa-moon"></i></span></li>
-                <li class="hvr-underline-from-center notdropdown" id="translate_home"><span class="speen">⌛</span></li>
-                <li class="hvr-underline-from-center notdropdown" id="translate_gallery"><span class="speen">⌛</span></li>
-                <li class="hvr-underline-from-right notdropdown" id="translate_contact"><span class="speen">⌛</span></li>
-                <div class="dropdown">
-                    <li id="translate_lang"><span class="speen">⌛</span></li>
-                    <div class="dropdown-menu">
-                    </div>
-                </div>
-            </prawo-p>
+
+        
+        <p class="too-small">
+            Your screen is too small to display this website properly. Please use a bigger screen.
+        </p>
+        <header class="primary-header flex">
+        <div>
+        <img src="https://www.ukw.edu.pl/img/ukw.svg" class="logo">
+        </div>
+        
+        <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false"><span class="sr-only">Menu</span></button>
+        
+        <nav>
+        <ul id="primary-navigation" data-visible="false" class="primary-navigation flex">
+        <li class="active">
+            <a class="translate_home">
+                CheckLoad
+            </a>
+        </li>
+        <li>
+            <a class="translate_gallery">
+                Gallery
+            </a>
+        </li>
+        </li>
+        <li>
+            <a class="login-card">
+                <i class="fas fa-user"></i> Login
+            </a>
+        </li>
+        <li>
+            <a class="translate_contact">
+                Contact
+            </a>
+        </li>
+        <li id="language-pick">
+            <a class="translate_lang">
+                Language
+            </a>
+        </li>
         </ul>
+        </nav>
+        </header>
+        
+        <section data-visible="false" id="language-picker">
+        <div class="background-hider">
+        <div class="dropdown-menu">
+        </div>
+        </div>
+        </section>
+
+
     <div id="kontener">
         <h1>Artykuł :) </h1>
         <div class="karta" id="kartaArticle">

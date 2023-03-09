@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #000;
+        stroke-width: 1px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Linia_1" data-name="Linia 1" class="cls-1" d="M2.75,7.375v-1.5h27v1.5h-27Z"/>
+  <path id="Linia_1_kopia" data-name="Linia 1 kopia" class="cls-1" d="M2.75,16.375v-1.5h27v1.5h-27Z"/>
+  <path id="Linia_1_kopia_2" data-name="Linia 1 kopia 2" class="cls-1" d="M2.25,25.125v-2h27v2h-27Z"/>
+</svg>

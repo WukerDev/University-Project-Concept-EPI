@@ -27,33 +27,22 @@ function getCookie(cname) {
 }
 
 $(document).ready(function() {
-
     //Sprawdz czy ciasteczko "jezyk" istnieje
     if (!getCookie("jezyk")) {
-        document.cookie = "jezyk="+currentJezyk+"; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/";
+        document.cookie = "jezyk=PL; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/; SameSite=None; Secure";
+        location.reload();
     }
-
-    //Uzupelnij dropdown o jezyki z listy
-    var theDiv = $(".dropdown-menu");
-    $.each(jezyki, function(index, value) {
-        if (value != cookieJezyk) {
-            var flagImg = $("<img width=20 height=20 >").attr("src", "../assets/flags/" + value + ".png");
-            var listItem = $("<a style=\"display:flex;\" onClick='changeLang(\""+value+"\")'>").append(flagImg).append("<span>"+value+"</span>");
-            theDiv.append(listItem);
-        }
-    });
-    $(".dropdown").append(theDiv);
 });
 
 //Funkcja zmieniajaca jezyk strony (zmiana wartosci ciasteczka 'jezyk')
 function changeLang(language){
     if (jezyki.includes(language)) {
-        document.cookie = "jezyk="+language+"; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/";
+        document.cookie = "jezyk="+language+"; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/; SameSite=None; Secure";
     }
     else{
-        document.cookie = "jezyk=PL; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/";
+        document.cookie = "jezyk=PL; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/; SameSite=None; Secure";
     }
-        location.reload();
+    location.reload();
 }
 
 //Funkcja ladujaca dane z pliku json
@@ -63,26 +52,26 @@ function zaladujDane() {
         if (xhr.readyState == 4 && xhr.status == 200) {
             var dane = JSON.parse(xhr.responseText);
             //glowna
-            $(".translate_home").html('<span><b>' + dane.home + "</b></span>").click(function() {
+            $(".translate_home").html('<span aria-hidden="true">' + '<i class="fas fa-house"></i></span>' + dane.home).click(function() {
                 window.location.href = "home.html";
             });
             document.title = dane.page_title;
             //galeria
-            $(".translate_gallery").html("<span><b>"+ dane.gallery + "</b></span>").click(function() {
+            $(".translate_gallery").html('<span aria-hidden="true">'+ '<i class="fas fa-images"></i></span>'+ dane.gallery).click(function() {
                 window.location.href = "gallery.html";
             });
             
-            //tytul strony
-            $(".translate_page_title").html(dane.page_title);
-
-            //jezyk
-            $(".translate_lang").html("<span style=\"align-items:center;\"><img style=\"height:auto;margin:0px 2px;\" width=20 height=22 src=\"../assets/flags/"+dane.lang+".png\"><b>"+ dane.lang + "</b></span>");
-
             //kontakt
-            $(".translate_contact").html("<span><b>"+ dane.contact + "</b></span>").click(function() {
+            $(".translate_contact").html('<span aria-hidden="true">'+ '<i class="fas fa-envelope"></i></span>'+dane.contact).click(function() {
                 window.location.href = "contact.html";
             });
+            
+            //jezyk
+            $(".translate_lang").html('<span aria-hidden="true"><img src="../assets/flags/'+dane.lang+'.png"></span>'+ dane.lang);
 
+            //tytul strony
+            $(".translate_page_title").html(dane.page_title);
+            
             //custom click functions
             $('.login-card').click(function() {
                 window.location.href = "login.html";

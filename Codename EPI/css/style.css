@@ -1,8 +1,14 @@
 /* html, body {height:100%;} */
 
-@font-face {
+/* @font-face {
     font-family: 'TheEpicFont';
     src: url(DidactGothic-Regular.ttf);
+} */
+@font-face{
+    font-family: 'GigaFont';
+    src: url(GigaFont.woff2);
+    font-weight: 100 900;
+    font-display: swap;
 }
 
 body{
@@ -15,7 +21,7 @@ body{
     overflow-x: hidden;
     display: grid;
     grid-template-rows: auto 1fr auto;
-    font-family: 'TheEpicFont', sans-serif;
+    font-family: 'GigaFont', sans-serif;
 }
 
 #user-icon{
@@ -98,6 +104,8 @@ nav > ul > li > a{
 .primary-header{
     align-items: center;
     justify-content: space-between;
+
+    user-select: none;
 
     background-color: hsl(0 0% 100% / 0.95);
     box-shadow: 0 0.5rem 1rem hsl(0 0% 0% / 0.05);
@@ -347,6 +355,15 @@ span.highlight{ /* POGRUBIENIE I POWIĘKSZENIE TEKSTU */
     text-align: center;
     margin-inline: auto;
     font-size: 25px;
+}
+#title span{
+    font-weight: 400;
+    transition: font-weight 350ms;
+}
+#title span:hover{
+    font-weight: 700;
+    cursor: default;
+    user-select: none;
 }
 
 #articles .article{

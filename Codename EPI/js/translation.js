@@ -52,17 +52,22 @@ function zaladujDane() {
         if (xhr.readyState == 4 && xhr.status == 200) {
             var dane = JSON.parse(xhr.responseText);
             //glowna
-            $(".translate_home").html('<span aria-hidden="true">' + '<i class="fas fa-house"></i></span>' + dane.home).click(function() {
+            $(".translate_home").html('<a><span aria-hidden="true">' + '<i class="fas fa-house"></i></span>' + dane.home+'</a>').click(function() {
                 window.location.href = "home.html";
             });
             document.title = dane.page_title;
             //galeria
-            $(".translate_gallery").html('<span aria-hidden="true">'+ '<i class="fas fa-images"></i></span>'+ dane.gallery).click(function() {
+            $(".translate_gallery").html('<a><span aria-hidden="true">'+ '<i class="fas fa-images"></i></span>'+ dane.gallery+'</a>').click(function() {
                 window.location.href = "gallery.html";
             });
             
+            //login_card
+            $(".translate_login_card").html('<a><span aria-hidden="true">'+ '<i class="fas fa-user"></i></span>'+ dane.log_in+'</a>').click(function() {
+                window.location.href = "login.html";
+            });
+
             //kontakt
-            $(".translate_contact").html('<span aria-hidden="true">'+ '<i class="fas fa-envelope"></i></span>'+dane.contact).click(function() {
+            $(".translate_contact").html('<a><span aria-hidden="true">'+ '<i class="fas fa-envelope"></i></span>'+dane.contact+'</a>').click(function() {
                 window.location.href = "contact.html";
             });
             

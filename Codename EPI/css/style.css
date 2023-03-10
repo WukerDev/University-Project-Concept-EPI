@@ -90,7 +90,7 @@ body{
 
 /* NAVBAR STYLING */
 nav > ul > li > a{
-    font-size: clamp(1rem, 1.5vw, 1.3rem);
+    font-size: clamp(0.9rem, 1.5vw, 1.3rem);
     color: #000;
 }
 .flex{

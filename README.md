@@ -1,5 +1,5 @@
 
-## Koncepcja projektu inżynierskiego
+## Koncepcja projektu
 ...
 
 ![Logo](https://www.ukw.edu.pl/img/ukw.svg)
